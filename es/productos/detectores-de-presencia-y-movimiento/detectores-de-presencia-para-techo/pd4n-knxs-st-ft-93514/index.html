@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es-ES">
+<html lang="es-ES" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -18,53 +18,242 @@
 <meta property="og:title" content="PD4N-KNXs-ST-FT (93514): detector de presencia KNX | B.E.G.">
 <meta property="og:description" content="Detector de presencia PIR KNX con KNX Secure: 360°, hasta Ø24 m (450 m²), 1 salida de luz, 1 de esclavo y 3 HVAC. Configuración ETS 5+. Ficha y FAQ.">
 <meta property="og:url" content="https://migure89.github.io/beg-luxomat-prototipo/es/productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/pd4n-knxs-st-ft-93514/">
-<meta property="og:image" content="https://migure89.github.io/beg-luxomat-prototipo/assets/img/93514-detector-presencia-beg-400.webp">
+<meta property="og:image" content="https://migure89.github.io/beg-luxomat-prototipo/assets/img/93514-detector-presencia-beg-720.webp">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#07080b">
 <link rel="icon" href="../../../../../assets/img/beg-logo.svg" type="image/svg+xml">
+<link rel="preload" href="../../../../../assets/fonts/geist-sub.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var t=localStorage.getItem('beg-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <style>
-:root{--red:#d00;--ink:#1d1d1f;--mut:#555;--bg:#f5f5f7;--line:#ddd;--max:1120px}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:#fff}
-a{color:#b00000}a:hover{color:var(--ink)}img{max-width:100%;height:auto}
-.proto{background:#fff6d6;color:#5a4500;font-size:13px;text-align:center;padding:4px 12px;border-bottom:1px solid #eed98a}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-header.site{border-bottom:1px solid var(--line)}
-.hd{display:flex;align-items:center;gap:20px;min-height:64px;flex-wrap:wrap}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700}
-nav.main ul{list-style:none;display:flex;flex-wrap:wrap;gap:4px 18px;margin:0;padding:0}
-nav.main a{text-decoration:none;color:var(--ink);font-size:15px;padding:8px 0;display:inline-block}
-nav.main a:hover{color:var(--red)}
-.crumbs{font-size:14px;color:var(--mut);margin:16px 0 0}.crumbs ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap}
-.crumbs li+li:before{content:"\203A";margin:0 8px;color:#999}.crumbs a{color:var(--mut)}
-h1{font-size:clamp(1.6rem,3.5vw,2.3rem);line-height:1.2;margin:.6em 0 .4em}
-h2{font-size:1.45rem;line-height:1.25;margin:1.8em 0 .6em}h3{font-size:1.1rem;margin:1.2em 0 .4em}
-.lead{font-size:1.12rem;color:#333;max-width:70ch}
-.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center;padding:16px 0 8px}
-.hero img{justify-self:center;aspect-ratio:1/1}
-.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;padding:12px 20px;border-radius:4px;font-weight:600;margin:6px 8px 6px 0}
-.btn.sec{background:#fff;color:var(--ink);border:1px solid var(--ink)}.btn:hover{color:#fff;background:#a00}.btn.sec:hover{background:var(--bg);color:var(--ink)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin:12px 0}
-.card{border:1px solid var(--line);border-radius:6px;padding:16px;background:#fff}
-.card h3{margin-top:.2em}.card img{display:block;margin:0 auto 8px;aspect-ratio:1/1}
-.card .meta{color:var(--mut);font-size:14px}
-table{border-collapse:collapse;width:100%;margin:8px 0 16px;font-size:15px}
-th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
-th{width:40%;background:var(--bg);font-weight:600}thead th{background:#eee;width:auto}
-.facts{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:12px 0}.facts dt{font-weight:600}.facts dd{margin:0}
-.box{background:var(--bg);border-radius:6px;padding:16px 20px;margin:16px 0}
-.tldr{border-left:4px solid var(--red);background:var(--bg);padding:12px 18px;margin:16px 0}
-details{border-bottom:1px solid var(--line);padding:10px 0}summary{cursor:pointer;font-weight:600}
-mark.tbc{background:#ffe9a8;color:#5a4500;padding:0 3px;border-radius:2px;font-size:.92em}
-.src{font-size:13px;color:var(--mut)}
-footer.site{margin-top:48px;background:var(--ink);color:#ddd;font-size:14px;padding:28px 0}
-footer.site a{color:#fff}.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-footer.site .src{color:#bbb}
-form.calc{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px 20px}
-form.calc label{display:flex;flex-direction:column;font-weight:600;font-size:15px}
-form.calc input,form.calc select{font:inherit;padding:8px;border:1px solid #767676;border-radius:4px;margin-top:4px}
-form.calc small{font-weight:400;color:var(--mut)}
-.result{font-size:1.1rem}.result strong{font-size:1.4rem}
-@media (max-width:760px){.hero{grid-template-columns:1fr}.hero img{width:240px;height:240px}th{width:45%}}
+@font-face{font-family:Geist;src:url(../../../../../assets/fonts/geist-sub.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url(../../../../../assets/fonts/geistmono-sub.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Geist Fallback";src:local("Arial"),local("Liberation Sans"),local("Helvetica");size-adjust:103%;ascent-override:89%;descent-override:21%;line-gap-override:0%}
+@view-transition{navigation:auto}
+:root{
+--bg:#07080b;--bg2:#0c0e13;--surf:#11141a;--surf2:#171b23;--line:rgba(255,255,255,.09);--line2:rgba(255,255,255,.16);
+--ink:#f3f1ea;--mut:#a9afba;--dim:#8d939e;--acc:#ffcf73;--acc2:#ff9f43;--acc-ink:#ffcf73;--on-acc:#1b1306;--cool:#8fd3ff;--red:#e2001a;
+--glow:rgba(255,190,90,.30);--glow2:rgba(255,160,60,.12);--shadow:0 1px 0 rgba(255,255,255,.04) inset,0 20px 60px -30px rgba(0,0,0,.8);
+--tbc-bg:rgba(255,207,115,.12);
+--sans:Geist,"Geist Fallback",system-ui,sans-serif;--mono:"Geist Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+--s-1:clamp(.8rem,.78rem + .1vw,.86rem);--s0:clamp(1rem,.97rem + .15vw,1.07rem);--s1:clamp(1.15rem,1.08rem + .35vw,1.35rem);
+--s2:clamp(1.35rem,1.2rem + .75vw,1.8rem);--s3:clamp(1.7rem,1.4rem + 1.5vw,2.6rem);--s4:clamp(2.2rem,1.6rem + 3vw,4rem);--s5:clamp(2.6rem,1.7rem + 4.6vw,5.6rem);
+--max:1240px;--r:18px;--r2:28px;color-scheme:dark}
+:root[data-theme=light]{
+--bg:#f6f4ee;--bg2:#efece4;--surf:#ffffff;--surf2:#faf8f3;--line:rgba(20,20,30,.10);--line2:rgba(20,20,30,.18);
+--ink:#121317;--mut:#4a4f59;--dim:#5b616b;--acc:#ffb84d;--acc2:#ff8a1f;--acc-ink:#8a4600;--on-acc:#1b1306;--cool:#0b6da8;
+--glow:rgba(255,170,60,.35);--glow2:rgba(255,160,60,.14);--shadow:0 20px 50px -30px rgba(40,30,10,.35);--tbc-bg:rgba(255,184,77,.22);color-scheme:light}
+*,*:before,*:after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--s0)/1.6 var(--sans);font-feature-settings:"kern","calt";-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,svg{max-width:100%;height:auto}
+a{color:inherit;text-decoration-color:color-mix(in srgb,currentColor 35%,transparent);text-underline-offset:.2em}
+a:hover{color:var(--acc-ink)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--acc);color:var(--on-acc);padding:8px 14px;border-radius:8px;z-index:99}.skip:focus{left:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+.mono{font-family:var(--mono);font-size:var(--s-1);letter-spacing:.02em}
+.eyebrow{font-family:var(--mono);font-size:var(--s-1);letter-spacing:.08em;text-transform:uppercase;color:var(--mut);display:inline-flex;gap:.6em;align-items:center}
+.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 12px 2px var(--glow)}
+h1,h2,h3{font-weight:620;letter-spacing:-.025em;line-height:1.08;margin:0 0 .5em;text-wrap:balance}
+h1{font-size:var(--s4)}h2{font-size:var(--s3)}h3{font-size:var(--s1);letter-spacing:-.01em;line-height:1.25}
+p{margin:0 0 1em;text-wrap:pretty}
+.lead{font-size:var(--s1);color:var(--mut);max-width:62ch;line-height:1.5}
+.mut{color:var(--mut)}.src{font-size:var(--s-1);color:var(--dim)}.src a{color:var(--mut)}
+mark.tbc{background:var(--tbc-bg);color:var(--ink);border:1px dashed var(--acc-ink);border-radius:6px;padding:0 .35em;font-size:.9em;white-space:normal}
+.proto{position:relative;z-index:60;display:flex;justify-content:center;align-items:center;gap:.6em;padding:6px 16px;font:500 12px/1.4 var(--mono);letter-spacing:.04em;color:var(--mut);background:linear-gradient(90deg,transparent,var(--glow2),transparent),var(--bg2);border-bottom:1px solid var(--line)}
+.proto:before{content:"PROTOTIPO";font-weight:700;font-size:10px;letter-spacing:.12em;color:var(--on-acc);background:var(--acc);padding:1px 7px;border-radius:99px}
+header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 78%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line);view-transition-name:site-header}
+.hd{display:flex;align-items:center;gap:20px;min-height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+.logo img{border-radius:6px}.logo small{display:block;font:500 11px/1 var(--mono);color:var(--dim);letter-spacing:.06em;text-transform:uppercase;margin-top:3px}
+nav.main{margin-left:auto;overflow-x:auto;scrollbar-width:none}nav.main::-webkit-scrollbar{display:none}
+nav.main ul{list-style:none;display:flex;gap:2px;margin:0;padding:0}
+nav.main a{display:block;text-decoration:none;color:var(--mut);font-size:15px;padding:8px 12px;border-radius:99px;white-space:nowrap;transition:color .2s,background .2s}
+nav.main a:hover,nav.main a[aria-current]{color:var(--ink);background:var(--surf2)}
+.hd-act{display:flex;gap:8px;align-items:center}
+.iconbtn{width:40px;height:40px;display:grid;place-items:center;border-radius:99px;border:1px solid var(--line2);background:transparent;color:var(--ink);cursor:pointer}
+.iconbtn:hover{border-color:var(--acc)}.iconbtn svg{width:18px;height:18px}
+:root[data-theme=light] .i-sun,:root:not([data-theme=light]) .i-moon{display:none}
+.btn{--b:var(--acc);display:inline-flex;align-items:center;gap:.55em;min-height:46px;padding:0 20px;border-radius:99px;font:600 15px/1 var(--sans);text-decoration:none;cursor:pointer;border:1px solid transparent;position:relative;overflow:hidden;isolation:isolate;transition:transform .2s,box-shadow .3s,background .2s}
+.btn.pri{background:var(--acc);color:var(--on-acc);box-shadow:0 0 0 0 var(--glow),0 10px 30px -10px var(--glow)}
+.btn.pri:hover{color:var(--on-acc);box-shadow:0 0 0 6px var(--glow2),0 14px 40px -8px var(--glow);transform:translateY(-1px)}
+.btn.pri:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s;z-index:-1}
+.btn.pri:hover:after{transform:translateX(120%)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line2)}.btn.ghost:hover{border-color:var(--acc);color:var(--ink);background:var(--surf2)}
+.btn.sm{min-height:38px;padding:0 14px;font-size:14px}
+.btn .ar{transition:transform .2s}.btn:hover .ar{transform:translateX(3px)}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0}
+section{padding:clamp(56px,8vw,112px) 0;position:relative}
+.sec-hd{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(24px,4vw,44px)}
+.sec-hd h2{margin:0;max-width:22ch}.sec-hd p{margin:0;max-width:52ch;color:var(--mut)}
+.hair{border-top:1px solid var(--line)}
+.crumbs{padding-top:22px}.crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;font:500 12.5px/1.5 var(--mono);color:var(--dim);letter-spacing:.02em}
+.crumbs li+li:before{content:"/";margin-right:6px;color:var(--line2)}.crumbs a{color:var(--mut);text-decoration:none}.crumbs a:hover{color:var(--acc-ink)}
+/* hero */
+.hero{padding:clamp(28px,5vw,64px) 0 clamp(40px,6vw,80px);position:relative;overflow:clip}
+.hero:before{content:"";position:absolute;inset:-20% -10% auto auto;width:min(900px,90vw);aspect-ratio:1;background:radial-gradient(closest-side,var(--glow),var(--glow2) 45%,transparent 70%);pointer-events:none;filter:blur(10px);z-index:-1}
+.hero-g{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,64px);align-items:center}
+.display{display:block;font-size:var(--s5);font-weight:640;letter-spacing:-.045em;line-height:.98;margin-bottom:.28em;background:linear-gradient(180deg,var(--ink) 30%,color-mix(in srgb,var(--ink) 60%,var(--acc)) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.display em{font-style:normal;color:var(--acc-ink);-webkit-text-fill-color:var(--acc-ink);text-shadow:0 0 40px var(--glow)}
+.h1-sub{display:block;font-size:var(--s1);font-weight:500;letter-spacing:-.01em;line-height:1.35;color:var(--mut);max-width:40ch}
+/* cards & bento */
+.card{position:relative;background:linear-gradient(180deg,var(--surf),var(--bg2));border:1px solid var(--line);border-radius:var(--r);padding:clamp(18px,2.4vw,28px);box-shadow:var(--shadow);overflow:hidden;isolation:isolate}
+.card.spot:before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),var(--glow2),transparent 60%);opacity:0;transition:opacity .3s;z-index:-1}
+.card.spot:hover:before{opacity:1}
+.card h3 a{text-decoration:none}.card h3 a:after{content:"";position:absolute;inset:0}
+.card:has(h3 a):hover{border-color:var(--line2)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr))}@media (min-width:981px){.grid.g3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.bento{display:grid;gap:14px;grid-template-columns:repeat(12,1fr)}
+.bento>*{grid-column:span 4}.bento .w6{grid-column:span 6}.bento .w8{grid-column:span 8}.bento .w3{grid-column:span 3}.bento .w12{grid-column:span 12}
+.stat{display:flex;flex-direction:column;justify-content:space-between;min-height:190px}
+.stat b{display:block;font-size:var(--s4);font-weight:600;letter-spacing:-.04em;line-height:1;margin-bottom:.15em}
+.stat b span{color:var(--acc-ink)}.stat p{margin:0;color:var(--mut)}
+.stat .src{margin-top:14px}
+.chip{display:inline-flex;align-items:center;gap:6px;font:500 13px/1 var(--mono);padding:7px 11px;border-radius:99px;border:1px solid var(--line2);color:var(--mut);background:var(--surf);white-space:nowrap}
+.chip.on{color:var(--on-acc);background:var(--acc);border-color:var(--acc)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.kv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin:22px 0}
+.kv div{background:var(--surf);padding:14px 16px}.kv dt{font:500 11.5px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--dim);margin-bottom:6px}.kv dd{margin:0;font-weight:560}
+.tldr{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--surf);border-radius:12px;padding:16px 20px;margin:20px 0;color:var(--mut)}
+.tldr strong{color:var(--ink)}
+/* product visuals */
+.pv{position:relative;display:grid;place-items:center;aspect-ratio:1;border-radius:var(--r2);background:radial-gradient(60% 60% at 50% 45%,var(--glow),transparent 70%),linear-gradient(180deg,var(--surf),var(--bg2));border:1px solid var(--line);overflow:hidden}
+.pv img{width:78%;height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+.pv:after{content:"";position:absolute;inset:auto 15% 9% 15%;height:14%;background:radial-gradient(closest-side,rgba(0,0,0,.45),transparent);z-index:-1}
+.pcard{display:flex;flex-direction:column;gap:10px}.pcard .pv{aspect-ratio:4/3;margin:-6px -6px 8px}.pcard .pv img{width:52%}
+.pcard .meta{font:500 12.5px/1.5 var(--mono);color:var(--dim)}
+.specs-mini{list-style:none;padding:0;margin:0;font-size:14px;color:var(--mut)}.specs-mini li{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-top:1px solid var(--line)}.specs-mini li span:last-child{color:var(--ink);text-align:right}
+/* tables */
+.tbl{width:100%;border-collapse:collapse;font-size:15px}
+.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl tbody th{font-weight:500;color:var(--mut);width:42%}.tbl td{font-family:var(--mono);font-size:14px}
+.tbl thead th{font:500 12px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--dim)}
+.tbl caption{caption-side:bottom;text-align:left;padding-top:12px}
+.tbl .cur{background:var(--tbc-bg)}
+.scroller{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surf)}
+details.faq{border-top:1px solid var(--line);padding:4px 0}
+details.faq:last-of-type{border-bottom:1px solid var(--line)}
+details.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;padding:18px 0;font-weight:560;font-size:var(--s1);letter-spacing:-.01em}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary:after{content:"+";font:400 24px/1 var(--mono);color:var(--acc-ink);transition:transform .3s}
+details.faq[open] summary:after{transform:rotate(45deg)}
+details.faq p{color:var(--mut);max-width:75ch;padding-bottom:12px}
+.split{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,5vw,72px)}
+.sticky{position:sticky;top:100px;align-self:start}
+.steps{counter-reset:s;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s}.steps li:before{content:"0" counter(s);display:block;font:500 13px/1 var(--mono);color:var(--acc-ink);margin-bottom:28px}
+.checks{list-style:none;padding:0;margin:0;columns:2 320px;column-gap:40px}.checks li{break-inside:avoid;padding:10px 0 10px 28px;border-top:1px solid var(--line);position:relative;color:var(--mut)}
+.checks li:before{content:"";position:absolute;left:2px;top:17px;width:10px;height:10px;border-radius:50%;background:var(--acc);box-shadow:0 0 10px var(--glow)}
+.answers{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr))}
+.answers article h3{font-size:var(--s0);font-weight:600}.answers article p{color:var(--mut);margin:0 0 10px}
+.cta-band{border-radius:var(--r2);padding:clamp(28px,6vw,72px);background:radial-gradient(80% 120% at 85% 0%,var(--glow),transparent 60%),linear-gradient(180deg,var(--surf2),var(--surf));border:1px solid var(--line2);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px;align-items:end}
+.cta-band h2{margin:0}
+/* forms */
+.field{display:flex;flex-direction:column;gap:6px;font-weight:560;font-size:14.5px}
+.field small{font-weight:400;color:var(--dim);font-size:12.5px}
+input,select,button{font:inherit}
+.field input,.field select{width:100%;min-width:0;box-sizing:border-box;min-height:46px;padding:0 14px;border-radius:12px;border:1px solid var(--line2);background:var(--bg2);color:var(--ink);font-family:var(--mono);font-size:15px}
+.field input:focus,.field select:focus{border-color:var(--acc);outline:none;box-shadow:0 0 0 4px var(--glow2)}
+fieldset{border:0;padding:0;margin:0;min-width:0}legend{font-weight:560;font-size:14.5px;margin-bottom:8px;padding:0}
+.seg{display:flex;flex-wrap:wrap;gap:6px}.seg label{position:relative}.seg input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.seg span{display:inline-flex;min-height:40px;align-items:center;padding:0 14px;border-radius:99px;border:1px solid var(--line2);font-size:14px;color:var(--mut);transition:all .2s}
+.seg input:checked+span{background:var(--acc);color:var(--on-acc);border-color:var(--acc);box-shadow:0 0 20px -4px var(--glow)}
+.seg input:focus-visible+span{outline:2px solid var(--acc);outline-offset:2px}
+input[type=range]{width:100%;accent-color:var(--acc);min-height:30px}
+/* simulator */
+.sim{border-radius:var(--r2);border:1px solid var(--line2);background:linear-gradient(180deg,var(--surf),var(--bg2));padding:14px;box-shadow:var(--shadow)}
+.sim svg{display:block;width:100%;height:auto;border-radius:18px}
+.sim .zone rect.fl{fill:var(--bg2);stroke:var(--line2);stroke-width:1.5}
+.sim .halo{opacity:0;transition:opacity .9s ease}
+.sim .zone.on .halo{opacity:1}.sim .zone.dim .halo{opacity:.28}
+.sim .lum{fill:var(--line2);transition:fill .6s}.sim .zone.on .lum,.sim .zone.dim .lum{fill:var(--acc)}
+.sim .det{fill:var(--surf2);stroke:var(--mut);stroke-width:1.5}.sim .zone.on .det{stroke:var(--acc)}
+.sim .ring{fill:none;stroke:var(--acc);stroke-width:1.2;opacity:0}
+.sim .zone.on .ring{animation:ping 2.2s ease-out infinite}
+.sim .lbl{font:500 11px var(--mono);fill:var(--dim);letter-spacing:.04em}.sim .zone.on .lbl{fill:var(--ink)}
+.sim .pct{font:600 12px var(--mono);fill:var(--acc-ink)}
+.sim #person{cursor:grab;outline:none}.sim #person:focus-visible .pring{stroke:var(--acc);stroke-width:3}
+.sim .win{stroke:var(--cool);stroke-width:4;stroke-linecap:round}
+.sim-ui{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;padding:12px 6px 2px}
+.sim-ui label{display:flex;gap:10px;align-items:center;font-size:13.5px;color:var(--mut);flex:1 1 220px}
+.sim-status{font:500 12.5px/1.4 var(--mono);color:var(--mut)}
+@keyframes ping{0%{opacity:.7;transform:scale(.4)}100%{opacity:0;transform:scale(1.6)}}
+.sim .ring{transform-box:fill-box;transform-origin:center}
+/* coverage */
+.cov{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(20px,4vw,56px);align-items:center}
+.cov svg{width:100%;height:auto;border-radius:var(--r2);background:var(--bg2);border:1px solid var(--line)}
+.cov .r{fill:var(--glow2);stroke:var(--acc);stroke-width:.12;transition:opacity .4s,fill .4s}
+.cov[data-sel] .r{opacity:.18}.cov[data-sel=t] .r.t,.cov[data-sel=f] .r.f,.cov[data-sel=s] .r.s{opacity:1;fill:var(--glow)}
+.cov .grid-l{stroke:var(--line);stroke-width:.05}
+.cov .sweep{transform-origin:0 0;animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cov-legend{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.cov-legend button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:14px;cursor:pointer;background:var(--surf)}
+.cov-legend button[aria-pressed=true]{border-color:var(--acc);box-shadow:0 0 0 4px var(--glow2)}
+.cov-legend button:focus-visible{outline:2px solid var(--acc)}
+.cov-legend i{width:12px;height:12px;border-radius:50%;border:2px solid var(--acc)}
+.cov-legend b{font:600 var(--s1)/1 var(--mono);letter-spacing:-.02em}
+/* gallery */
+.gal{display:grid;gap:10px;min-width:0}.pdp-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.sec-g{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}.feat-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center}
+.gal-main{display:grid;grid-auto-flow:column;grid-auto-columns:100%;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:var(--r2);scrollbar-width:none}
+.gal-main::-webkit-scrollbar{display:none}.gal-main figure{margin:0;scroll-snap-align:start}
+.gal-main .pv.plan{background:#fff}.gal-main .pv.plan img{filter:none;width:86%}
+.gal-th{display:flex;gap:8px}.gal-th a{display:block;width:72px;height:72px;border-radius:12px;border:1px solid var(--line2);background:var(--surf);overflow:hidden;padding:6px}
+.gal-th a[aria-current=true]{border-color:var(--acc)}.gal-th img{width:100%;height:100%;object-fit:contain}
+.subnav{position:sticky;top:64px;z-index:40;background:color-mix(in srgb,var(--bg) 85%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.subnav ul{list-style:none;display:flex;gap:4px;margin:0 auto;padding:8px clamp(18px,4vw,40px);overflow-x:auto;max-width:var(--max);scrollbar-width:none}
+.subnav a{display:block;padding:7px 12px;border-radius:99px;text-decoration:none;font:500 13px/1 var(--mono);color:var(--mut);white-space:nowrap}.subnav a:hover{background:var(--surf2);color:var(--ink)}
+/* finder */
+.finder{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(20px,4vw,48px);align-items:start}
+.finder form{display:grid;gap:22px}
+.fcount{font:500 13px/1.4 var(--mono);color:var(--mut)}
+.pcard[hidden]{display:none}
+.empty{display:none}.empty.show{display:block}
+/* calc */
+.calc{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(20px,4vw,48px);align-items:start}
+.calc form{display:grid;gap:18px;grid-template-columns:1fr 1fr}
+.calc form .full{grid-column:1/-1}
+.out{display:grid;gap:14px}
+.big{font-size:var(--s4);font-weight:600;letter-spacing:-.04em;line-height:1}.big small{font-size:var(--s0);font-weight:500;color:var(--mut);letter-spacing:0;margin-left:.3em}
+.bar{height:14px;border-radius:99px;background:var(--surf2);overflow:hidden;border:1px solid var(--line)}
+.bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--acc2),var(--acc));box-shadow:0 0 20px var(--glow);transition:width .5s}
+.bar.base i{background:var(--line2);box-shadow:none}
+.formula{font:500 13.5px/1.8 var(--mono);color:var(--mut);background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:16px 18px;overflow-x:auto}
+.formula code{display:block;font:inherit;color:var(--ink);white-space:normal}.calc form>*,.finder>*{min-width:0}
+.formula b{color:var(--acc-ink);font-weight:600}
+/* timeline */
+.tl{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(230px,1fr);gap:14px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x proximity}
+.tl li{list-style:none;scroll-snap-align:start;border-top:2px solid var(--line2);padding-top:16px;position:relative}
+.tl li:before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--acc);box-shadow:0 0 14px var(--glow)}
+.tl b{font:600 var(--s2)/1 var(--mono);letter-spacing:-.03em;display:block;margin-bottom:10px}
+.art{width:100%;height:auto;display:block}
+.art .st{stroke:var(--line2);fill:none;stroke-width:1.5}.art .fi{fill:var(--surf2)}.art .lt{fill:url(#lg)}
+.toc ol{list-style:none;padding:0;margin:0}.toc{min-width:0;list-style:none;padding:0;margin:0;font-size:14px;border-left:1px solid var(--line)}.toc a{display:block;padding:6px 0 6px 16px;color:var(--mut);text-decoration:none;margin-left:-1px;border-left:1px solid transparent}.toc a:hover{color:var(--ink);border-color:var(--acc)}
+article.prose{max-width:72ch}article.prose h2{font-size:var(--s2);margin-top:2em}article.prose ul{padding-left:1.2em;color:var(--mut)}article.prose li{margin:.4em 0}
+.prose p{color:var(--mut)}.prose strong{color:var(--ink)}
+footer.site{margin-top:40px;border-top:1px solid var(--line);background:linear-gradient(180deg,var(--bg),var(--bg2));padding:clamp(48px,7vw,96px) 0 32px;font-size:14.5px;color:var(--mut)}
+.f-big{font-size:var(--s4);font-weight:620;letter-spacing:-.045em;line-height:1;color:var(--ink);margin:0 0 48px;max-width:16ch}
+.f-big span{color:var(--acc-ink)}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}.fgrid strong{color:var(--ink);display:block;margin-bottom:6px;font-weight:600}
+.fgrid a{color:var(--mut);display:inline-block;padding:4px 0;min-height:24px;min-width:24px}.fgrid a:hover{color:var(--acc-ink)}
+.f-bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:48px;padding-top:20px;border-top:1px solid var(--line)}
+/* motion */
+@media (prefers-reduced-motion:no-preference){
+ @supports (animation-timeline:view()){
+  .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+  @keyframes rise{from{opacity:.001;transform:translateY(28px) scale(.985)}to{opacity:1;transform:none}}
+  .hero:before{animation:drift linear both;animation-timeline:scroll(root);animation-range:0 600px}
+  @keyframes drift{to{transform:translateY(120px) scale(1.15);opacity:.4}}
+ }
+}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}@view-transition{navigation:none}}
+/* responsive */
+@media (max-width:980px){.hero-g,.split,.finder,.calc,.cov,.cta-band{grid-template-columns:minmax(0,1fr)}.sticky{position:static}
+ .bento>*,.bento .w3,.bento .w6,.bento .w8{grid-column:span 6}}
+@media (max-width:640px){.feat-g{grid-template-columns:minmax(0,1fr)}.bento>*,.bento .w3,.bento .w6,.bento .w8{grid-column:span 12}.calc form{grid-template-columns:1fr}
+ .hd{flex-wrap:wrap;gap:6px 12px;padding-top:6px}nav.main{order:3;width:100%;margin:0 -8px}.hd-act{margin-left:auto}.hd-act .btn{display:none}
+ .stat{min-height:0}.tbl tbody th{width:46%}.proto{font-size:11px}}
+main,footer{overflow-x:clip}details.faq summary{overflow-wrap:anywhere}details.faq summary>*{min-width:0}
 </style>
 <script type="application/ld+json">{
  "@context": "https://schema.org",
@@ -109,7 +298,8 @@ form.calc small{font-weight:400;color:var(--mut)}
    "description": "Detector de presencia PIR KNX (estándar) con cobertura de 360° y un alcance de hasta 24 m de diámetro (450 m²)",
    "category": "Detectores de presencia para techo",
    "image": [
-    "https://migure89.github.io/beg-luxomat-prototipo/assets/img/93514-detector-presencia-beg-400.webp"
+    "https://migure89.github.io/beg-luxomat-prototipo/assets/img/93514-detector-presencia-beg-720.webp",
+    "https://migure89.github.io/beg-luxomat-prototipo/assets/img/93514-plano-dimensiones.webp"
    ],
    "url": "https://migure89.github.io/beg-luxomat-prototipo/es/productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/pd4n-knxs-st-ft-93514/",
    "brand": {
@@ -284,12 +474,12 @@ form.calc small{font-weight:400;color:var(--mut)}
    "@id": "https://migure89.github.io/beg-luxomat-prototipo/es/productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/pd4n-knxs-st-ft-93514/#webpage",
    "url": "https://migure89.github.io/beg-luxomat-prototipo/es/productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/pd4n-knxs-st-ft-93514/",
    "name": "PD4N-KNXs-ST-FT (93514): detector de presencia KNX | B.E.G.",
-   "mainEntity": {
-    "@id": "https://migure89.github.io/beg-luxomat-prototipo/es/productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/pd4n-knxs-st-ft-93514/#product"
-   },
    "inLanguage": "es-ES",
    "isPartOf": {
     "@id": "https://www.beg-luxomat.com/es/#website"
+   },
+   "mainEntity": {
+    "@id": "https://migure89.github.io/beg-luxomat-prototipo/es/productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/pd4n-knxs-st-ft-93514/#product"
    }
   },
   {
@@ -324,48 +514,80 @@ form.calc small{font-weight:400;color:var(--mut)}
   }
  ]
 }</script>
+<script src="../../../../../assets/app.js" defer></script>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 <div class="proto" role="note">Prototipo de propuesta SEO/GEO – no es la web oficial de B.E.G.</div>
 <header class="site"><div class="wrap hd">
-<a class="logo" href="../../../../"><img src="../../../../../assets/img/beg-logo.svg" width="40" height="40" alt="Logotipo de B.E.G."><span>B.E.G. Hispania</span></a>
-<nav class="main" aria-label="Principal"><ul><li><a href="../../../" aria-current="page">Productos</a></li><li><a href="../../../../soluciones/industrias/">Sectores</a></li><li><a href="../../../../guias/como-elegir-un-detector-de-presencia/">Guía</a></li><li><a href="../../../../herramientas/calculadora-de-ahorro-energetico/">Calculadora de ahorro</a></li><li><a href="../../../../empresa/conoce-beg/">Sobre B.E.G.</a></li><li><a href="../../../../contacto/">Contacto</a></li></ul></nav>
+<a class="logo" href="../../../../"><img src="../../../../../assets/img/beg-logo.svg" width="34" height="34" alt="Logotipo de B.E.G."><span>B.E.G. Hispania<small>Lighting control</small></span></a>
+<nav class="main" aria-label="Principal"><ul><li><a href="../../../" aria-current="page">Productos</a></li><li><a href="../../../encuentra-tu-detector/">Encuentra tu detector</a></li><li><a href="../../../../soluciones/industrias/">Sectores</a></li><li><a href="../../../../guias/">Guías</a></li><li><a href="../../../../herramientas/calculadora-de-ahorro-energetico/">Calculadora</a></li><li><a href="../../../../empresa/conoce-beg/">Empresa</a></li><li><a href="../../../../contacto/">Contacto</a></li></ul></nav>
+<div class="hd-act"><button class="iconbtn" id="theme" type="button" aria-label="Cambiar entre modo oscuro y claro"><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></button>
+<a class="btn pri sm" href="../../../../contacto/#proyecto">Proyecto</a></div>
 </div></header>
-<main class="wrap">
-<nav class="crumbs" aria-label="Ruta de navegación"><ol><li><a href="../../../../">Inicio</a></li><li><a href="../../../">Productos</a></li><li><a href="../">Detectores de presencia para techo</a></li><li aria-current="page">PD4N-KNXs-ST-FT</li></ol></nav>
-<section class="hero">
-<div>
-<h1>Detector de presencia KNX de techo PD4N-KNXs-ST-FT (ref. 93514)</h1>
-<p class="lead">Detector de presencia PIR KNX (estándar) con cobertura de 360° y un alcance de hasta 24 m de diámetro (450 m²).</p>
-<dl class="facts"><dt>Referencia</dt><dd>93514</dd><dt>Modelo</dt><dd>PD4N-KNXs-ST-FT</dd><dt>EAN</dt><dd>4007529935147</dd><dt>Sistema</dt><dd>KNX (estándar)</dd>
-<dt>Alcance</dt><dd>máx. Ø 24 m transversal | máx. Ø 8 m frontal | máx. Ø 6.4 m actividad sedentaria</dd><dt>Cobertura</dt><dd>450 m² / 2.5 m Altura de montaje</dd></dl>
-<a class="btn" href="../../../../contacto/">Solicitar asesoramiento</a><a class="btn sec" href="https://www.beg-luxomat.com/es/productos/detalles/PD4N-KNXs-ST-FT-93514/">Descargas en la ficha oficial</a>
+<main id="main">
+<nav class="crumbs wrap" aria-label="Ruta de navegación"><ol><li><a href="../../../../">Inicio</a></li><li><a href="../../../">Productos</a></li><li><a href="../">Detectores de presencia para techo</a></li><li aria-current="page">PD4N-KNXs-ST-FT</li></ol></nav>
+<section class="hero" style="padding-top:28px"><div class="wrap hero-g pdp-g">
+<div class="gal">
+<div class="gal-main" id="gal" tabindex="0" aria-label="Galería de imágenes del producto">
+<figure id="g-foto"><div class="pv"><img src="../../../../../assets/img/93514-detector-presencia-beg-480.webp" srcset="../../../../../assets/img/93514-detector-presencia-beg-240.webp 240w, ../../../../../assets/img/93514-detector-presencia-beg-480.webp 480w, ../../../../../assets/img/93514-detector-presencia-beg-720.webp 720w" sizes="(max-width: 980px) 80vw, 560px" width="480" height="480" alt="Detector de presencia de techo B.E.G. PD4N-KNXs-ST-FT (ref. 93514)" fetchpriority="high" decoding="async" class="" style="view-transition-name:prod-93514"></div></figure>
+<figure id="g-plano"><div class="pv plan"><img src="../../../../../assets/img/93514-plano-dimensiones.webp" width="720" height="720" loading="lazy" decoding="async" alt="Plano de dimensiones del detector B.E.G. PD4N-KNXs-ST-FT"></div></figure>
 </div>
-<img src="../../../../../assets/img/93514-detector-presencia-beg-400.webp" srcset="../../../../../assets/img/93514-detector-presencia-beg-200.webp 200w, ../../../../../assets/img/93514-detector-presencia-beg-400.webp 400w" sizes="(max-width: 600px) 90vw, 400px" width="400" height="400" alt="Detector de presencia de techo B.E.G. PD4N-KNXs-ST-FT (ref. 93514)" fetchpriority="high" decoding="async" class="">
-</section>
-<div class="tldr"><strong>Resumen:</strong> Detector de presencia KNX con acoplador de bus integrado. Detección 360° en techo, máx. Ø 24 m transversal | máx. Ø 8 m frontal | máx. Ø 6.4 m actividad sedentaria. Aplicaciones típicas según B.E.G.: control de grandes áreas, como garajes subterráneos, pabellones deportivos, naves industriales, muelles de carga, salas.</div>
-<h2>Descripción y funciones</h2><ul><li>Detector de presencia KNX con acoplador de BUS KNX integrado</li><li>Soporta KNX Secure</li><li>Configuración en ETS 5 y posteriores para la integración en sistemas KNX</li><li>Ajuste individual de la sensibilidad para cada sensor PIR</li><li>Desactivación individual de los sensores PIR</li><li>Reconocimiento de la dirección del movimiento</li><li>Medición de luz mixta mediante sensor crepuscular interno, externo y remoto (opcional)</li><li>Modo semiautomático inteligente, modo de regulación independientemente de la presencia (crepuscular), Modo automático</li><li>1 salida iluminación (regulación o conmutación), 1 salida para esclavo, 3 salidas HVAC (independientes)</li><li>Regulación de hasta 3 grupos mediante Offset (posibilidad de interactuar externamente)</li><li>Corta estancia, adaptación automática de la temporización de apagado, función pasillo</li><li>Varias funciones de bloqueo</li><li>Soft-start</li><li>Activación de escenas de iluminación</li><li>Indicadores de estado desactivables</li><li>La base de datos de productos para la importación al sistema ETS se puede descargar de la página web de B.E.G.</li><li>Modo Master-Esclavo para ampliación de la zona de cobertura</li><li>Amplias posibilidades de optimización para medición lumínica</li><li>Retorno de los valores lumínicos medidos al bus</li><li>Adaptación de la curva de regulación lumínica</li><li>Controlable bidireccionalmente utilizando el adaptador IR y la App B.E.G. para smartphones</li><li>Código PIN</li><li>Programable a distancia mediante mando a distancia opcional</li><li>Modo de programación (dirección física) activable por mando a distancia</li><li>Modo HVAC (0=Automático, 1=Confort, 2=Espera, 3= Económico, 4= Antihielo / protección radiador)</li><li>Interacción manual posible vía pulsador KNX externo</li><li>Control de las funciones (señal de vida, reporte cíclico)</li><li>Apagado forzado</li><li>Función Central-Off inteligente</li><li>Aviso de apagado</li><li>Función de rodaje para fluorescentes, ajustable entre 1 y 100 horas</li><li>Comportamiento tras retorno del voltaje de alimentación configurable libremente</li><li>Pausa de seguridad de intervalo variable tras apagado de las luminarias</li></ul>
-<h2 id="especificaciones">Especificaciones técnicas</h2>
-<table><caption class="src" style="caption-side:bottom;text-align:left">Fuente: ficha técnica oficial de B.E.G. (<a href="https://www.beg-luxomat.com/es/productos/detalles/PD4N-KNXs-ST-FT-93514/">beg-luxomat.com</a>, consultada el 26-oct-2026).</caption><tbody>
-<tr><th scope="row">Referencia / EAN</th><td>93514 / 4007529935147</td></tr><tr><th scope="row">Tensión de alimentación</th><td>vía bus KNX</td></tr><tr><th scope="row">Dimensiones</th><td>Ø 106 x 74 mm</td></tr><tr><th scope="row">Consumo de corriente</th><td>12 mA</td></tr><tr><th scope="row">Área de detección</th><td>horizontal 360° (Montaje en techo)</td></tr><tr><th scope="row">Alcance</th><td>máx. Ø 24 m transversal | máx. Ø 8 m frontal | máx. Ø 6.4 m actividad sedentaria</td></tr><tr><th scope="row">Área de cobertura (movimiento transversal)</th><td>450 m² / 2.5 m Altura de montaje</td></tr><tr><th scope="row">Altura de montaje mín. / máx. / recomendada</th><td>2 m / 10 m / 2.5 m</td></tr><tr><th scope="row">Grado de protección / Clase</th><td>IP20 / Clase III</td></tr><tr><th scope="row">Resistencia a impactos</th><td>IK04</td></tr><tr><th scope="row">Temperatura ambiental</th><td>-25 °C a +55 °C</td></tr><tr><th scope="row">Carcasa</th><td>Policarbonato de alta calidad</td></tr><tr><th scope="row">Color de material</th><td>blanco mate, similar RAL9010</td></tr><tr><th scope="row">Sensores crepusculares</th><td>2</td></tr><tr><th scope="row">Número de sensores PIR</th><td>4</td></tr><tr><th scope="row">KNX TP 256</th><td>Sí</td></tr><tr><th scope="row">KNX Secure</th><td>Sí</td></tr><tr><th scope="row">Luz de orientación</th><td>5 – 100 % / OFF / 1 min – 255 min</td></tr><tr><th scope="row">Luz nocturna</th><td>5 – 100 %</td></tr><tr><th scope="row">Nivel de luminosidad deseado</th><td>5 – 2000 Lux</td></tr></tbody></table>
-<h2>Aplicaciones</h2><p>control de grandes áreas, como garajes subterráneos, pabellones deportivos, naves industriales, muelles de carga, salas.</p>
-<h2>Plano de dimensiones</h2>
-<img src="../../../../../assets/img/93514-plano-dimensiones.webp" width="640" height="640" loading="lazy" decoding="async" alt="Plano de dimensiones del detector B.E.G. PD4N-KNXs-ST-FT" style="max-width:420px">
-<h2>Documentación y descargas</h2><p>Disponibles en la <a href="https://www.beg-luxomat.com/es/productos/detalles/PD4N-KNXs-ST-FT-93514/">ficha oficial</a>:</p><ul><li>Generar documento de prescripción 93514</li><li>CE declaration of conformity 93514 (en)</li><li>Breve manual</li><li>B.E.G. KNX information (EN)</li><li>Descripción de aplicación</li><li>Bases de datos KNX</li><li>EPD (PEP)</li><li>BIM data 93514 (es)</li></ul>
-<p>Partida para el <em>Generador de precios</em> / BC3: <mark class="tbc">[dato a confirmar por el cliente]</mark></p>
-<h2 id="preguntas-frecuentes">Preguntas frecuentes</h2><details open><summary>¿Es compatible con KNX Secure?</summary><p>Sí. La ficha de B.E.G. indica soporte de KNX Secure y KNX TP 256.</p></details><details><summary>¿Con qué versión de ETS se configura?</summary><p>Con ETS 5 y posteriores. La base de datos de producto para ETS se descarga desde la web de B.E.G.</p></details><details><summary>¿Qué salidas tiene?</summary><p>1 salida de iluminación (regulación o conmutación), 1 salida para esclavo y 3 salidas HVAC independientes. Permite regular hasta 3 grupos mediante offset.</p></details><details><summary>¿Qué alcance tiene?</summary><p>Máx. Ø 24 m transversal, Ø 8 m frontal y Ø 6,4 m en actividad sedentaria; 450 m² a 2,5 m de altura. Altura de montaje de 2 a 10 m (recomendada 2,5 m).</p></details><details><summary>¿Para qué espacios está indicado?</summary><p>B.E.G. lo indica para el control de grandes áreas como garajes subterráneos, pabellones deportivos, naves industriales, muelles de carga y salas.</p></details><details><summary>¿Cuánto consume del bus KNX?</summary><p>12 mA, según la ficha técnica.</p></details>
-<h2>Productos relacionados</h2><div class="grid"><div class="card"><img src="../../../../../assets/img/93546-detector-presencia-beg-200.webp" srcset="../../../../../assets/img/93546-detector-presencia-beg-200.webp 200w, ../../../../../assets/img/93546-detector-presencia-beg-400.webp 400w" sizes="(max-width: 600px) 50vw, 200px" width="200" height="200" alt="Detector de presencia B.E.G. PD4N-BMS DALI-2" loading="lazy" decoding="async" class=""><h3><a href="../pd4n-bms-dali-2-93546/">PD4N-BMS DALI-2</a></h3><p class="meta">DALI-2 (BMS)</p></div><div class="card"><img src="../../../../../assets/img/93460-detector-presencia-beg-200.webp" srcset="../../../../../assets/img/93460-detector-presencia-beg-200.webp 200w, ../../../../../assets/img/93460-detector-presencia-beg-400.webp 400w" sizes="(max-width: 600px) 50vw, 200px" width="200" height="200" alt="Detector de presencia B.E.G. PD4N-M-DACO DALI-2" loading="lazy" decoding="async" class=""><h3><a href="../pd4n-m-daco-dali-2-93460/">PD4N-M-DACO DALI-2</a></h3><p class="meta">DALI-2 (DACO, controlador integrado)</p></div></div>
-<p>¿Dudas sobre qué modelo elegir? Consulte la <a href="../../../../guias/como-elegir-un-detector-de-presencia/">guía para elegir un detector de presencia</a> o estime el ahorro con la <a href="../../../../herramientas/calculadora-de-ahorro-energetico/">calculadora</a>.</p>
+<div class="gal-th"><a href="#g-foto" aria-current="true" aria-label="Ver foto del producto"><img src="../../../../../assets/img/93514-detector-presencia-beg-240.webp" width="60" height="60" alt="" loading="lazy"></a><a href="#g-plano" aria-label="Ver plano de dimensiones"><img src="../../../../../assets/img/93514-plano-dimensiones.webp" width="60" height="60" alt="" loading="lazy" style="background:#fff;border-radius:6px"></a>
+<a href="#cobertura" aria-label="Ver diagrama de cobertura" style="display:grid;place-items:center;font:600 11px var(--mono);color:var(--acc-ink)">Ø24</a></div>
+</div>
+<div>
+<p class="eyebrow">KNX (estándar)</p>
+<h1 style="font-size:var(--s3)">Detector de presencia KNX de techo PD4N-KNXs-ST-FT (ref. 93514)</h1>
+<p class="lead">Detector de presencia PIR KNX (estándar) con cobertura de 360° y un alcance de hasta 24 m de diámetro (450 m²).</p>
+<dl class="kv"><div><dt>Referencia</dt><dd>93514</dd></div><div><dt>EAN</dt><dd>4007529935147</dd></div><div><dt>Sistema</dt><dd>KNX (estándar)</dd></div><div><dt>Alcance máx.</dt><dd>Ø 24 m</dd></div><div><dt>Cobertura</dt><dd>450 m² a 2,5 m</dd></div><div><dt>Montaje</dt><dd>2 – 10 m</dd></div><div><dt>Protección</dt><dd>IP20 / Clase III</dd></div><div><dt>Alimentación</dt><dd>vía bus KNX</dd></div></dl>
+<div class="ctas" style="margin-top:0"><a class="btn pri" href="../../../../contacto/#proyecto">Solicitar asesoramiento <span class="ar" aria-hidden="true">→</span></a><a class="btn ghost" href="https://www.beg-luxomat.com/es/productos/detalles/PD4N-KNXs-ST-FT-93514/">Ficha oficial y descargas</a></div>
+<div class="tldr"><strong>Resumen:</strong> Detector de presencia KNX con acoplador de bus integrado. Detección 360° en techo, máx. Ø 24 m transversal | máx. Ø 8 m frontal | máx. Ø 6.4 m actividad sedentaria. Precio de referencia: <mark class="tbc">[dato a confirmar por el cliente]</mark></div>
+</div></div></section>
+<nav class="subnav" aria-label="Secciones de la ficha"><ul><li><a href="#cobertura">Cobertura</a></li><li><a href="#funciones">Funciones</a></li><li><a href="#especificaciones">Especificaciones</a></li><li><a href="#descargas">Descargas</a></li><li><a href="#comparar">Comparar</a></li><li><a href="#preguntas-frecuentes">FAQ</a></li></ul></nav>
+<section id="cobertura"><div class="wrap">
+<div class="sec-hd"><h2>Cobertura en planta</h2><p>Alcances de la ficha técnica para una altura de montaje de 2,5 m. Seleccione un tipo de movimiento.</p></div>
+<div class="cov" id="cov">
+<svg viewBox="-14 -14 28 28" role="img" aria-labelledby="cov-t">
+<title id="cov-t">Diagrama de cobertura en planta del PD4N-KNXs-ST-FT a 2,5 m de altura: Ø 24 m transversal, Ø 8 m frontal, Ø 6,4 m sedentaria</title>
+<defs><linearGradient id="sw" x1="0" y1="0" x2="1" y2="0"><stop offset="0" style="stop-color:var(--acc);stop-opacity:.0"/><stop offset="1" style="stop-color:var(--acc);stop-opacity:.35"/></linearGradient></defs>
+<path class="grid-l" d="M-12 -13V13M-13 -12H13"/><path class="grid-l" d="M-10 -13V13M-13 -10H13"/><path class="grid-l" d="M-8 -13V13M-13 -8H13"/><path class="grid-l" d="M-6 -13V13M-13 -6H13"/><path class="grid-l" d="M-4 -13V13M-13 -4H13"/><path class="grid-l" d="M-2 -13V13M-13 -2H13"/><path class="grid-l" d="M0 -13V13M-13 0H13"/><path class="grid-l" d="M2 -13V13M-13 2H13"/><path class="grid-l" d="M4 -13V13M-13 4H13"/><path class="grid-l" d="M6 -13V13M-13 6H13"/><path class="grid-l" d="M8 -13V13M-13 8H13"/><path class="grid-l" d="M10 -13V13M-13 10H13"/><path class="grid-l" d="M12 -13V13M-13 12H13"/>
+<circle class="r t" r="12"/><circle class="r f" r="4"/><circle class="r s" r="3.2"/>
+<path class="sweep" d="M0 0L12 0A12 12 0 0 0 10.39 -6Z" fill="url(#sw)"/>
+<circle r=".55" style="fill:var(--ink)"/><circle r="1.1" style="fill:none;stroke:var(--acc);stroke-width:.12"/>
+<g style="font:600 .85px var(--mono);fill:var(--mut)"><text x="0" y="-12.4" text-anchor="middle">Ø 24 m · transversal</text><text x="0" y="-4.35" text-anchor="middle">Ø 8 m · frontal</text><text x="0" y="2.6" text-anchor="middle" style="fill:var(--ink)">Ø 6,4 m</text>
+<path d="M-12 12.6h4" style="stroke:var(--mut);stroke-width:.15"/><text x="-12" y="13.6">4 m</text></g>
+</svg>
+<div><ul class="cov-legend">
+<li><button type="button" data-k="t" aria-pressed="false"><i></i><span><strong>Movimiento transversal</strong><br><span class="src">Persona que cruza la zona · 450 m²</span></span><b>Ø 24 m</b></button></li>
+<li><button type="button" data-k="f" aria-pressed="false"><i></i><span><strong>Movimiento frontal</strong><br><span class="src">Persona que camina hacia el detector</span></span><b>Ø 8 m</b></button></li>
+<li><button type="button" data-k="s" aria-pressed="false"><i></i><span><strong>Actividad sedentaria</strong><br><span class="src">Puesto de trabajo sentado</span></span><b>Ø 6,4 m</b></button></li></ul>
+<p class="src" style="margin-top:16px">Fuente: <a href="https://www.beg-luxomat.com/es/productos/detalles/PD4N-KNXs-ST-FT-93514/">ficha oficial PD4N-KNXs-ST-FT</a>. Diagrama a escala (cuadrícula de 2 m). Alcances a otras alturas de montaje: <mark class="tbc">[dato a confirmar por el cliente]</mark></p></div>
+</div></div></section>
+<section class="hair" id="funciones"><div class="wrap split"><div class="sticky"><h2>Descripción y funciones</h2><p class="mut">Según la ficha técnica de B.E.G.</p></div><div><ul class="checks"><li>Detector de presencia KNX con acoplador de BUS KNX integrado</li><li>Soporta KNX Secure</li><li>Configuración en ETS 5 y posteriores para la integración en sistemas KNX</li><li>Ajuste individual de la sensibilidad para cada sensor PIR</li><li>Desactivación individual de los sensores PIR</li><li>Reconocimiento de la dirección del movimiento</li><li>Medición de luz mixta mediante sensor crepuscular interno, externo y remoto (opcional)</li><li>Modo semiautomático inteligente, modo de regulación independientemente de la presencia (crepuscular), Modo automático</li><li>1 salida iluminación (regulación o conmutación), 1 salida para esclavo, 3 salidas HVAC (independientes)</li><li>Regulación de hasta 3 grupos mediante Offset (posibilidad de interactuar externamente)</li><li>Corta estancia, adaptación automática de la temporización de apagado, función pasillo</li><li>Varias funciones de bloqueo</li><li>Soft-start</li><li>Activación de escenas de iluminación</li><li>Indicadores de estado desactivables</li><li>La base de datos de productos para la importación al sistema ETS se puede descargar de la página web de B.E.G.</li><li>Modo Master-Esclavo para ampliación de la zona de cobertura</li><li>Amplias posibilidades de optimización para medición lumínica</li><li>Retorno de los valores lumínicos medidos al bus</li><li>Adaptación de la curva de regulación lumínica</li><li>Controlable bidireccionalmente utilizando el adaptador IR y la App B.E.G. para smartphones</li><li>Código PIN</li><li>Programable a distancia mediante mando a distancia opcional</li><li>Modo de programación (dirección física) activable por mando a distancia</li><li>Modo HVAC (0=Automático, 1=Confort, 2=Espera, 3= Económico, 4= Antihielo / protección radiador)</li><li>Interacción manual posible vía pulsador KNX externo</li><li>Control de las funciones (señal de vida, reporte cíclico)</li><li>Apagado forzado</li><li>Función Central-Off inteligente</li><li>Aviso de apagado</li><li>Función de rodaje para fluorescentes, ajustable entre 1 y 100 horas</li><li>Comportamiento tras retorno del voltaje de alimentación configurable libremente</li><li>Pausa de seguridad de intervalo variable tras apagado de las luminarias</li></ul>
+<h3 style="margin-top:36px">Aplicaciones según B.E.G.</h3><div class="chips"><span class="chip">control de grandes áreas</span><span class="chip">como garajes subterráneos</span><span class="chip">pabellones deportivos</span><span class="chip">naves industriales</span><span class="chip">muelles de carga</span><span class="chip">salas</span></div></div></div></section>
+<section class="hair" id="especificaciones"><div class="wrap split"><div class="sticky"><h2>Especificaciones técnicas</h2><p class="mut">Ref. 93514 · EAN 4007529935147</p></div>
+<div class="scroller"><table class="tbl"><caption class="src" style="padding:12px 14px">Fuente: ficha técnica oficial de B.E.G. (<a href="https://www.beg-luxomat.com/es/productos/detalles/PD4N-KNXs-ST-FT-93514/">beg-luxomat.com</a>, consultada el 26-oct-2026).</caption><tbody>
+<tr><th scope="row">Referencia / EAN</th><td>93514 / 4007529935147</td></tr><tr><th scope="row">Tensión de alimentación</th><td>vía bus KNX</td></tr><tr><th scope="row">Dimensiones</th><td>Ø 106 x 74 mm</td></tr><tr><th scope="row">Consumo de corriente</th><td>12 mA</td></tr><tr><th scope="row">Área de detección</th><td>horizontal 360° (Montaje en techo)</td></tr><tr><th scope="row">Alcance</th><td>máx. Ø 24 m transversal | máx. Ø 8 m frontal | máx. Ø 6.4 m actividad sedentaria</td></tr><tr><th scope="row">Área de cobertura (movimiento transversal)</th><td>450 m² / 2.5 m Altura de montaje</td></tr><tr><th scope="row">Altura de montaje mín. / máx. / recomendada</th><td>2 m / 10 m / 2.5 m</td></tr><tr><th scope="row">Grado de protección / Clase</th><td>IP20 / Clase III</td></tr><tr><th scope="row">Resistencia a impactos</th><td>IK04</td></tr><tr><th scope="row">Temperatura ambiental</th><td>-25 °C a +55 °C</td></tr><tr><th scope="row">Carcasa</th><td>Policarbonato de alta calidad</td></tr><tr><th scope="row">Color de material</th><td>blanco mate, similar RAL9010</td></tr><tr><th scope="row">Sensores crepusculares</th><td>2</td></tr><tr><th scope="row">Número de sensores PIR</th><td>4</td></tr><tr><th scope="row">KNX TP 256</th><td>Sí</td></tr><tr><th scope="row">KNX Secure</th><td>Sí</td></tr><tr><th scope="row">Luz de orientación</th><td>5 – 100 % / OFF / 1 min – 255 min</td></tr><tr><th scope="row">Luz nocturna</th><td>5 – 100 %</td></tr><tr><th scope="row">Nivel de luminosidad deseado</th><td>5 – 2000 Lux</td></tr></tbody></table></div></div></section>
+<section class="hair" id="descargas"><div class="wrap"><div class="sec-hd"><h2>Documentación y descargas</h2><p>Partida para el <em>Generador de precios</em> / BC3: <mark class="tbc">[dato a confirmar por el cliente]</mark></p></div>
+<div class="grid"><article class="card spot reveal" style="display:flex;gap:14px;align-items:center;padding:16px 18px"><span class="chip on" style="min-width:52px;justify-content:center">TXT</span><div><h3 style="margin:0;font-size:var(--s0)"><a href="https://www.beg-luxomat.com/es/productos/detalles/PD4N-KNXs-ST-FT-93514/">Generar documento de prescripción 93514</a></h3><p class="src" style="margin:0">En la ficha oficial de beg-luxomat.com</p></div></article><article class="card spot reveal" style="display:flex;gap:14px;align-items:center;padding:16px 18px"><span class="chip on" style="min-width:52px;justify-content:center">CE</span><div><h3 style="margin:0;font-size:var(--s0)"><a href="https://www.beg-luxomat.com/es/productos/detalles/PD4N-KNXs-ST-FT-93514/">CE declaration of conformity 93514 (en)</a></h3><p class="src" style="margin:0">En la ficha oficial de beg-luxomat.com</p></div></article><article class="card spot reveal" style="display:flex;gap:14px;align-items:center;padding:16px 18px"><span class="chip on" style="min-width:52px;justify-content:center">PDF</span><div><h3 style="margin:0;font-size:var(--s0)"><a href="https://www.beg-luxomat.com/es/productos/detalles/PD4N-KNXs-ST-FT-93514/">Breve manual</a></h3><p class="src" style="margin:0">En la ficha oficial de beg-luxomat.com</p></div></article><article class="card spot reveal" style="display:flex;gap:14px;align-items:center;padding:16px 18px"><span class="chip on" style="min-width:52px;justify-content:center">PDF</span><div><h3 style="margin:0;font-size:var(--s0)"><a href="https://www.beg-luxomat.com/es/productos/detalles/PD4N-KNXs-ST-FT-93514/">B.E.G. KNX information (EN)</a></h3><p class="src" style="margin:0">En la ficha oficial de beg-luxomat.com</p></div></article><article class="card spot reveal" style="display:flex;gap:14px;align-items:center;padding:16px 18px"><span class="chip on" style="min-width:52px;justify-content:center">PDF</span><div><h3 style="margin:0;font-size:var(--s0)"><a href="https://www.beg-luxomat.com/es/productos/detalles/PD4N-KNXs-ST-FT-93514/">Descripción de aplicación</a></h3><p class="src" style="margin:0">En la ficha oficial de beg-luxomat.com</p></div></article><article class="card spot reveal" style="display:flex;gap:14px;align-items:center;padding:16px 18px"><span class="chip on" style="min-width:52px;justify-content:center">ETS</span><div><h3 style="margin:0;font-size:var(--s0)"><a href="https://www.beg-luxomat.com/es/productos/detalles/PD4N-KNXs-ST-FT-93514/">Bases de datos KNX</a></h3><p class="src" style="margin:0">En la ficha oficial de beg-luxomat.com</p></div></article><article class="card spot reveal" style="display:flex;gap:14px;align-items:center;padding:16px 18px"><span class="chip on" style="min-width:52px;justify-content:center">EPD</span><div><h3 style="margin:0;font-size:var(--s0)"><a href="https://www.beg-luxomat.com/es/productos/detalles/PD4N-KNXs-ST-FT-93514/">EPD (PEP)</a></h3><p class="src" style="margin:0">En la ficha oficial de beg-luxomat.com</p></div></article><article class="card spot reveal" style="display:flex;gap:14px;align-items:center;padding:16px 18px"><span class="chip on" style="min-width:52px;justify-content:center">BIM</span><div><h3 style="margin:0;font-size:var(--s0)"><a href="https://www.beg-luxomat.com/es/productos/detalles/PD4N-KNXs-ST-FT-93514/">BIM data 93514 (es)</a></h3><p class="src" style="margin:0">En la ficha oficial de beg-luxomat.com</p></div></article></div></div></section>
+<section class="hair" id="comparar"><div class="wrap"><div class="sec-hd"><h2>Compare los tres PD4N</h2><p>Mismo sensor 360°, distinto sistema. La columna resaltada es este modelo.</p></div>
+<div class="scroller"><table class="tbl"><caption class="src" style="padding:12px 14px">Fuente: fichas técnicas oficiales de beg-luxomat.com (26-oct-2026). «—»: el dato no figura en la ficha.</caption><thead><tr><th scope="col">Característica</th><th scope="col"><a href="../pd4n-bms-dali-2-93546/">PD4N-BMS DALI-2</a></th><th scope="col"><a href="../pd4n-m-daco-dali-2-93460/">PD4N-M-DACO DALI-2</a></th><th scope="col" class=cur><a href="./">PD4N-KNXs-ST-FT</a></th></tr></thead><tbody><tr><th scope="row">Tipo</th><td>Detector de presencia DALI-2 (input device, multimaster IEC 62386-103)</td><td>Detector de presencia con controlador de aplicación DALI-2 integrado (master único)</td><td class=cur>Detector de presencia KNX con acoplador de bus integrado</td></tr><tr><th scope="row">Alimentación</th><td>del bus DALI, máx. 22.5 V DC</td><td>230 V AC ±10% 50 Hz</td><td class=cur>vía bus KNX</td></tr><tr><th scope="row">Consumo</th><td>7 mA</td><td>aprox. 2 W</td><td class=cur>12 mA</td></tr><tr><th scope="row">Dimensiones</th><td>Ø 106 x 68 mm</td><td>Ø 106 x 95 mm</td><td class=cur>Ø 106 x 74 mm</td></tr><tr><th scope="row">Protección / clase</th><td>IP20 / Clase II</td><td>IP20 / Clase II</td><td class=cur>IP20 / Clase III</td></tr><tr><th scope="row">Alcance</th><td>máx. Ø 24 m transversal | máx. Ø 8 m frontal | máx. Ø 6.4 m actividad sedentaria</td><td>máx. Ø 24 m transversal | máx. Ø 8 m frontal | máx. Ø 6.4 m actividad sedentaria</td><td class=cur>máx. Ø 24 m transversal | máx. Ø 8 m frontal | máx. Ø 6.4 m actividad sedentaria</td></tr><tr><th scope="row">Cobertura</th><td>450 m² / 2.5 m Altura de montaje</td><td>450 m² / 2.5 m Altura de montaje</td><td class=cur>450 m² / 2.5 m Altura de montaje</td></tr><tr><th scope="row">Altura de montaje</th><td>2 m / 10 m / 2.5 m</td><td>2 m / 10 m / 2.5 m</td><td class=cur>2 m / 10 m / 2.5 m</td></tr><tr><th scope="row">Detectores esclavos</th><td>—</td><td>máx. 8</td><td class=cur>—</td></tr><tr><th scope="row">Luz de orientación</th><td>—</td><td>10 – 30 % / OFF / 5 min – 60 min / ∞</td><td class=cur>5 – 100 % / OFF / 1 min – 255 min</td></tr><tr><th scope="row">Nivel de luz ajustable</th><td>—</td><td>10 – 2500 Lux</td><td class=cur>5 – 2000 Lux</td></tr><tr><th scope="row">KNX Secure</th><td>—</td><td>—</td><td class=cur>Sí</td></tr></tbody></table></div><p class="src"><a href="../../../encuentra-tu-detector/">¿Dudas? Use el configurador «Encuentra tu detector»</a>.</p></div></section>
+<section class="hair"><div class="wrap" style="max-width:900px"><h2 id="preguntas-frecuentes">Preguntas frecuentes</h2><details class="faq" open><summary>¿Es compatible con KNX Secure?</summary><p>Sí. La ficha de B.E.G. indica soporte de KNX Secure y KNX TP 256.</p></details><details class="faq"><summary>¿Con qué versión de ETS se configura?</summary><p>Con ETS 5 y posteriores. La base de datos de producto para ETS se descarga desde la web de B.E.G.</p></details><details class="faq"><summary>¿Qué salidas tiene?</summary><p>1 salida de iluminación (regulación o conmutación), 1 salida para esclavo y 3 salidas HVAC independientes. Permite regular hasta 3 grupos mediante offset.</p></details><details class="faq"><summary>¿Qué alcance tiene?</summary><p>Máx. Ø 24 m transversal, Ø 8 m frontal y Ø 6,4 m en actividad sedentaria; 450 m² a 2,5 m de altura. Altura de montaje de 2 a 10 m (recomendada 2,5 m).</p></details><details class="faq"><summary>¿Para qué espacios está indicado?</summary><p>B.E.G. lo indica para el control de grandes áreas como garajes subterráneos, pabellones deportivos, naves industriales, muelles de carga y salas.</p></details><details class="faq"><summary>¿Cuánto consume del bus KNX?</summary><p>12 mA, según la ficha técnica.</p></details></div></section>
+<section class="hair"><div class="wrap"><div class="sec-hd"><h2>Productos relacionados</h2><p>Consulte la <a href="../../../../guias/como-elegir-un-detector-de-presencia/">guía de selección</a> o estime el ahorro con la <a href="../../../../herramientas/calculadora-de-ahorro-energetico/">calculadora</a>.</p></div>
+<div class="grid"><article class="card spot pcard reveal"><div class="pv"><img src="../../../../../assets/img/93546-detector-presencia-beg-240.webp" srcset="../../../../../assets/img/93546-detector-presencia-beg-240.webp 240w, ../../../../../assets/img/93546-detector-presencia-beg-480.webp 480w, ../../../../../assets/img/93546-detector-presencia-beg-720.webp 720w" sizes="240px" width="240" height="240" alt="Detector de presencia de techo B.E.G. PD4N-BMS DALI-2" loading="lazy" decoding="async" class="" style="view-transition-name:prod-93546"></div><p class="meta">Ref. 93546 · EAN 4007529935468</p><h3><a href="../pd4n-bms-dali-2-93546/">PD4N-BMS DALI-2</a></h3><div class="chips" style="margin:0"><span class="chip">DALI-2 · BMS (input device)</span><span class="chip">Ø 24 m</span></div><ul class="specs-mini"><li><span>Alimentación</span><span>del bus DALI, máx. 22.5 V DC</span></li><li><span>Montaje</span><span>2 m / 10 m / 2.5 m</span></li><li><span>Cobertura</span><span>450 m² / 2.5 m Altura de montaje</span></li></ul></article><article class="card spot pcard reveal"><div class="pv"><img src="../../../../../assets/img/93460-detector-presencia-beg-240.webp" srcset="../../../../../assets/img/93460-detector-presencia-beg-240.webp 240w, ../../../../../assets/img/93460-detector-presencia-beg-480.webp 480w, ../../../../../assets/img/93460-detector-presencia-beg-720.webp 720w" sizes="240px" width="240" height="240" alt="Detector de presencia de techo B.E.G. PD4N-M-DACO DALI-2" loading="lazy" decoding="async" class="" style="view-transition-name:prod-93460"></div><p class="meta">Ref. 93460 · EAN 4007529934607</p><h3><a href="../pd4n-m-daco-dali-2-93460/">PD4N-M-DACO DALI-2</a></h3><div class="chips" style="margin:0"><span class="chip">DALI-2 · controlador integrado</span><span class="chip">Ø 24 m</span></div><ul class="specs-mini"><li><span>Alimentación</span><span>230 V AC ±10% 50 Hz</span></li><li><span>Montaje</span><span>2 m / 10 m / 2.5 m</span></li><li><span>Cobertura</span><span>450 m² / 2.5 m Altura de montaje</span></li></ul></article></div></div></section>
 </main>
-<footer class="site"><div class="wrap fgrid">
-<div><strong>B.E.G. Hispania S.L.U.</strong><br>Filial en España de B.E.G. Brück Electronic GmbH<br>
-<a href="../../../../contacto/">Contacto y oficinas</a> · <a href="../../../../empresa/conoce-beg/">Sobre B.E.G.</a></div>
-<div><strong>Central</strong><br>Avinguda de Cornellà, 140<br>08950 Esplugues de Llobregat (Barcelona)<br>
-<a href="tel:+34930181609">+34 93 018 16 09</a> · <a href="mailto:info@beg-luxomat.es">info@beg-luxomat.es</a></div>
-<div><strong>Delegación Madrid</strong><br>Calle Aguacate, 41, Bloque A-2, 2ª planta, oficina 8<br>28054 Madrid</div>
-<div><strong>Síguenos</strong><br><a href="https://www.linkedin.com/company/beghispania/" rel="noopener">LinkedIn</a> · <a href="https://www.facebook.com/BEGHispania.es" rel="noopener">Facebook</a> · <a href="https://www.youtube.com/channel/UCuiP9Q4WF5_9bv6rZM32Kdw" rel="noopener">YouTube</a>
-<br><span class="src">Prototipo generado el 26-oct-2026. Textos y datos técnicos: beg-luxomat.com.</span></div>
+<footer class="site"><div class="wrap">
+<p class="f-big">Luz solo donde <span>hay alguien.</span></p>
+<div class="fgrid">
+<div><strong>B.E.G. Hispania S.L.U.</strong>Filial en España de B.E.G. Brück Electronic GmbH (Lindlar, Alemania).<br>
+<a href="../../../../empresa/conoce-beg/">Empresa</a> · <a href="../../../../contacto/">Contacto</a> · <a href="../../../../guias/">Guías</a></div>
+<div><strong>Central · Barcelona</strong>Avinguda de Cornellà, 140<br>08950 Esplugues de Llobregat (Barcelona)<br>
+<a href="tel:+34930181609">+34 93 018 16 09</a><br><a href="mailto:info@beg-luxomat.es">info@beg-luxomat.es</a></div>
+<div><strong>Delegación · Madrid</strong>Calle Aguacate, 41, Bloque A-2, 2ª planta, oficina 8<br>28054 Madrid</div>
+<div><strong>Síguenos</strong><a href="https://www.linkedin.com/company/beghispania/" rel="noopener">LinkedIn</a><br><a href="https://www.facebook.com/BEGHispania.es" rel="noopener">Facebook</a><br><a href="https://www.youtube.com/channel/UCuiP9Q4WF5_9bv6rZM32Kdw" rel="noopener">YouTube</a></div>
+</div>
+<div class="f-bot mono"><span>Prototipo v2 · 26-oct-2026 · Textos y datos técnicos: beg-luxomat.com</span><span>Tipografía Geist (SIL OFL) · Ilustraciones y simulaciones propias</span></div>
 </div></footer>
-
 </body>
 </html>

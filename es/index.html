@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="es-ES">
+<html lang="es-ES" data-theme="dark">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,51 +20,240 @@
 <meta property="og:url" content="https://migure89.github.io/beg-luxomat-prototipo/es/">
 <meta property="og:image" content="https://migure89.github.io/beg-luxomat-prototipo/assets/img/og-beg-hispania.jpg">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#07080b">
 <link rel="icon" href="../assets/img/beg-logo.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/geist-sub.woff2" as="font" type="font/woff2" crossorigin>
+<script>try{var t=localStorage.getItem('beg-theme');if(t)document.documentElement.dataset.theme=t}catch(e){}</script>
 <style>
-:root{--red:#d00;--ink:#1d1d1f;--mut:#555;--bg:#f5f5f7;--line:#ddd;--max:1120px}
-*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
-body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:#fff}
-a{color:#b00000}a:hover{color:var(--ink)}img{max-width:100%;height:auto}
-.proto{background:#fff6d6;color:#5a4500;font-size:13px;text-align:center;padding:4px 12px;border-bottom:1px solid #eed98a}
-.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
-header.site{border-bottom:1px solid var(--line)}
-.hd{display:flex;align-items:center;gap:20px;min-height:64px;flex-wrap:wrap}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700}
-nav.main ul{list-style:none;display:flex;flex-wrap:wrap;gap:4px 18px;margin:0;padding:0}
-nav.main a{text-decoration:none;color:var(--ink);font-size:15px;padding:8px 0;display:inline-block}
-nav.main a:hover{color:var(--red)}
-.crumbs{font-size:14px;color:var(--mut);margin:16px 0 0}.crumbs ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap}
-.crumbs li+li:before{content:"\203A";margin:0 8px;color:#999}.crumbs a{color:var(--mut)}
-h1{font-size:clamp(1.6rem,3.5vw,2.3rem);line-height:1.2;margin:.6em 0 .4em}
-h2{font-size:1.45rem;line-height:1.25;margin:1.8em 0 .6em}h3{font-size:1.1rem;margin:1.2em 0 .4em}
-.lead{font-size:1.12rem;color:#333;max-width:70ch}
-.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center;padding:16px 0 8px}
-.hero img{justify-self:center;aspect-ratio:1/1}
-.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;padding:12px 20px;border-radius:4px;font-weight:600;margin:6px 8px 6px 0}
-.btn.sec{background:#fff;color:var(--ink);border:1px solid var(--ink)}.btn:hover{color:#fff;background:#a00}.btn.sec:hover{background:var(--bg);color:var(--ink)}
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin:12px 0}
-.card{border:1px solid var(--line);border-radius:6px;padding:16px;background:#fff}
-.card h3{margin-top:.2em}.card img{display:block;margin:0 auto 8px;aspect-ratio:1/1}
-.card .meta{color:var(--mut);font-size:14px}
-table{border-collapse:collapse;width:100%;margin:8px 0 16px;font-size:15px}
-th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
-th{width:40%;background:var(--bg);font-weight:600}thead th{background:#eee;width:auto}
-.facts{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:12px 0}.facts dt{font-weight:600}.facts dd{margin:0}
-.box{background:var(--bg);border-radius:6px;padding:16px 20px;margin:16px 0}
-.tldr{border-left:4px solid var(--red);background:var(--bg);padding:12px 18px;margin:16px 0}
-details{border-bottom:1px solid var(--line);padding:10px 0}summary{cursor:pointer;font-weight:600}
-mark.tbc{background:#ffe9a8;color:#5a4500;padding:0 3px;border-radius:2px;font-size:.92em}
-.src{font-size:13px;color:var(--mut)}
-footer.site{margin-top:48px;background:var(--ink);color:#ddd;font-size:14px;padding:28px 0}
-footer.site a{color:#fff}.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
-footer.site .src{color:#bbb}
-form.calc{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px 20px}
-form.calc label{display:flex;flex-direction:column;font-weight:600;font-size:15px}
-form.calc input,form.calc select{font:inherit;padding:8px;border:1px solid #767676;border-radius:4px;margin-top:4px}
-form.calc small{font-weight:400;color:var(--mut)}
-.result{font-size:1.1rem}.result strong{font-size:1.4rem}
-@media (max-width:760px){.hero{grid-template-columns:1fr}.hero img{width:240px;height:240px}th{width:45%}}
+@font-face{font-family:Geist;src:url(../assets/fonts/geist-sub.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Geist Mono";src:url(../assets/fonts/geistmono-sub.woff2) format("woff2");font-weight:100 900;font-display:swap}
+@font-face{font-family:"Geist Fallback";src:local("Arial"),local("Liberation Sans"),local("Helvetica");size-adjust:103%;ascent-override:89%;descent-override:21%;line-gap-override:0%}
+@view-transition{navigation:auto}
+:root{
+--bg:#07080b;--bg2:#0c0e13;--surf:#11141a;--surf2:#171b23;--line:rgba(255,255,255,.09);--line2:rgba(255,255,255,.16);
+--ink:#f3f1ea;--mut:#a9afba;--dim:#8d939e;--acc:#ffcf73;--acc2:#ff9f43;--acc-ink:#ffcf73;--on-acc:#1b1306;--cool:#8fd3ff;--red:#e2001a;
+--glow:rgba(255,190,90,.30);--glow2:rgba(255,160,60,.12);--shadow:0 1px 0 rgba(255,255,255,.04) inset,0 20px 60px -30px rgba(0,0,0,.8);
+--tbc-bg:rgba(255,207,115,.12);
+--sans:Geist,"Geist Fallback",system-ui,sans-serif;--mono:"Geist Mono",ui-monospace,"SFMono-Regular",Menlo,monospace;
+--s-1:clamp(.8rem,.78rem + .1vw,.86rem);--s0:clamp(1rem,.97rem + .15vw,1.07rem);--s1:clamp(1.15rem,1.08rem + .35vw,1.35rem);
+--s2:clamp(1.35rem,1.2rem + .75vw,1.8rem);--s3:clamp(1.7rem,1.4rem + 1.5vw,2.6rem);--s4:clamp(2.2rem,1.6rem + 3vw,4rem);--s5:clamp(2.6rem,1.7rem + 4.6vw,5.6rem);
+--max:1240px;--r:18px;--r2:28px;color-scheme:dark}
+:root[data-theme=light]{
+--bg:#f6f4ee;--bg2:#efece4;--surf:#ffffff;--surf2:#faf8f3;--line:rgba(20,20,30,.10);--line2:rgba(20,20,30,.18);
+--ink:#121317;--mut:#4a4f59;--dim:#5b616b;--acc:#ffb84d;--acc2:#ff8a1f;--acc-ink:#8a4600;--on-acc:#1b1306;--cool:#0b6da8;
+--glow:rgba(255,170,60,.35);--glow2:rgba(255,160,60,.14);--shadow:0 20px 50px -30px rgba(40,30,10,.35);--tbc-bg:rgba(255,184,77,.22);color-scheme:light}
+*,*:before,*:after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-padding-top:90px}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 var(--s0)/1.6 var(--sans);font-feature-settings:"kern","calt";-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility}
+img,svg{max-width:100%;height:auto}
+a{color:inherit;text-decoration-color:color-mix(in srgb,currentColor 35%,transparent);text-underline-offset:.2em}
+a:hover{color:var(--acc-ink)}
+:focus-visible{outline:2px solid var(--acc);outline-offset:3px;border-radius:6px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--acc);color:var(--on-acc);padding:8px 14px;border-radius:8px;z-index:99}.skip:focus{left:8px}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 clamp(18px,4vw,40px)}
+.mono{font-family:var(--mono);font-size:var(--s-1);letter-spacing:.02em}
+.eyebrow{font-family:var(--mono);font-size:var(--s-1);letter-spacing:.08em;text-transform:uppercase;color:var(--mut);display:inline-flex;gap:.6em;align-items:center}
+.eyebrow:before{content:"";width:8px;height:8px;border-radius:50%;background:var(--acc);box-shadow:0 0 12px 2px var(--glow)}
+h1,h2,h3{font-weight:620;letter-spacing:-.025em;line-height:1.08;margin:0 0 .5em;text-wrap:balance}
+h1{font-size:var(--s4)}h2{font-size:var(--s3)}h3{font-size:var(--s1);letter-spacing:-.01em;line-height:1.25}
+p{margin:0 0 1em;text-wrap:pretty}
+.lead{font-size:var(--s1);color:var(--mut);max-width:62ch;line-height:1.5}
+.mut{color:var(--mut)}.src{font-size:var(--s-1);color:var(--dim)}.src a{color:var(--mut)}
+mark.tbc{background:var(--tbc-bg);color:var(--ink);border:1px dashed var(--acc-ink);border-radius:6px;padding:0 .35em;font-size:.9em;white-space:normal}
+.proto{position:relative;z-index:60;display:flex;justify-content:center;align-items:center;gap:.6em;padding:6px 16px;font:500 12px/1.4 var(--mono);letter-spacing:.04em;color:var(--mut);background:linear-gradient(90deg,transparent,var(--glow2),transparent),var(--bg2);border-bottom:1px solid var(--line)}
+.proto:before{content:"PROTOTIPO";font-weight:700;font-size:10px;letter-spacing:.12em;color:var(--on-acc);background:var(--acc);padding:1px 7px;border-radius:99px}
+header.site{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--bg) 78%,transparent);-webkit-backdrop-filter:saturate(1.4) blur(14px);backdrop-filter:saturate(1.4) blur(14px);border-bottom:1px solid var(--line);view-transition-name:site-header}
+.hd{display:flex;align-items:center;gap:20px;min-height:64px}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;font-weight:600;letter-spacing:-.01em;white-space:nowrap}
+.logo img{border-radius:6px}.logo small{display:block;font:500 11px/1 var(--mono);color:var(--dim);letter-spacing:.06em;text-transform:uppercase;margin-top:3px}
+nav.main{margin-left:auto;overflow-x:auto;scrollbar-width:none}nav.main::-webkit-scrollbar{display:none}
+nav.main ul{list-style:none;display:flex;gap:2px;margin:0;padding:0}
+nav.main a{display:block;text-decoration:none;color:var(--mut);font-size:15px;padding:8px 12px;border-radius:99px;white-space:nowrap;transition:color .2s,background .2s}
+nav.main a:hover,nav.main a[aria-current]{color:var(--ink);background:var(--surf2)}
+.hd-act{display:flex;gap:8px;align-items:center}
+.iconbtn{width:40px;height:40px;display:grid;place-items:center;border-radius:99px;border:1px solid var(--line2);background:transparent;color:var(--ink);cursor:pointer}
+.iconbtn:hover{border-color:var(--acc)}.iconbtn svg{width:18px;height:18px}
+:root[data-theme=light] .i-sun,:root:not([data-theme=light]) .i-moon{display:none}
+.btn{--b:var(--acc);display:inline-flex;align-items:center;gap:.55em;min-height:46px;padding:0 20px;border-radius:99px;font:600 15px/1 var(--sans);text-decoration:none;cursor:pointer;border:1px solid transparent;position:relative;overflow:hidden;isolation:isolate;transition:transform .2s,box-shadow .3s,background .2s}
+.btn.pri{background:var(--acc);color:var(--on-acc);box-shadow:0 0 0 0 var(--glow),0 10px 30px -10px var(--glow)}
+.btn.pri:hover{color:var(--on-acc);box-shadow:0 0 0 6px var(--glow2),0 14px 40px -8px var(--glow);transform:translateY(-1px)}
+.btn.pri:after{content:"";position:absolute;inset:0;background:linear-gradient(110deg,transparent 30%,rgba(255,255,255,.55) 50%,transparent 70%);transform:translateX(-120%);transition:transform .7s;z-index:-1}
+.btn.pri:hover:after{transform:translateX(120%)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line2)}.btn.ghost:hover{border-color:var(--acc);color:var(--ink);background:var(--surf2)}
+.btn.sm{min-height:38px;padding:0 14px;font-size:14px}
+.btn .ar{transition:transform .2s}.btn:hover .ar{transform:translateX(3px)}
+.ctas{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 0}
+section{padding:clamp(56px,8vw,112px) 0;position:relative}
+.sec-hd{display:flex;justify-content:space-between;align-items:end;gap:24px;flex-wrap:wrap;margin-bottom:clamp(24px,4vw,44px)}
+.sec-hd h2{margin:0;max-width:22ch}.sec-hd p{margin:0;max-width:52ch;color:var(--mut)}
+.hair{border-top:1px solid var(--line)}
+.crumbs{padding-top:22px}.crumbs ol{list-style:none;display:flex;flex-wrap:wrap;gap:6px;padding:0;margin:0;font:500 12.5px/1.5 var(--mono);color:var(--dim);letter-spacing:.02em}
+.crumbs li+li:before{content:"/";margin-right:6px;color:var(--line2)}.crumbs a{color:var(--mut);text-decoration:none}.crumbs a:hover{color:var(--acc-ink)}
+/* hero */
+.hero{padding:clamp(28px,5vw,64px) 0 clamp(40px,6vw,80px);position:relative;overflow:clip}
+.hero:before{content:"";position:absolute;inset:-20% -10% auto auto;width:min(900px,90vw);aspect-ratio:1;background:radial-gradient(closest-side,var(--glow),var(--glow2) 45%,transparent 70%);pointer-events:none;filter:blur(10px);z-index:-1}
+.hero-g{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:clamp(24px,4vw,64px);align-items:center}
+.display{display:block;font-size:var(--s5);font-weight:640;letter-spacing:-.045em;line-height:.98;margin-bottom:.28em;background:linear-gradient(180deg,var(--ink) 30%,color-mix(in srgb,var(--ink) 60%,var(--acc)) 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.display em{font-style:normal;color:var(--acc-ink);-webkit-text-fill-color:var(--acc-ink);text-shadow:0 0 40px var(--glow)}
+.h1-sub{display:block;font-size:var(--s1);font-weight:500;letter-spacing:-.01em;line-height:1.35;color:var(--mut);max-width:40ch}
+/* cards & bento */
+.card{position:relative;background:linear-gradient(180deg,var(--surf),var(--bg2));border:1px solid var(--line);border-radius:var(--r);padding:clamp(18px,2.4vw,28px);box-shadow:var(--shadow);overflow:hidden;isolation:isolate}
+.card.spot:before{content:"";position:absolute;inset:0;background:radial-gradient(400px circle at var(--mx,50%) var(--my,0%),var(--glow2),transparent 60%);opacity:0;transition:opacity .3s;z-index:-1}
+.card.spot:hover:before{opacity:1}
+.card h3 a{text-decoration:none}.card h3 a:after{content:"";position:absolute;inset:0}
+.card:has(h3 a):hover{border-color:var(--line2)}
+.grid{display:grid;gap:16px;grid-template-columns:repeat(auto-fill,minmax(min(100%,270px),1fr))}@media (min-width:981px){.grid.g3{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.bento{display:grid;gap:14px;grid-template-columns:repeat(12,1fr)}
+.bento>*{grid-column:span 4}.bento .w6{grid-column:span 6}.bento .w8{grid-column:span 8}.bento .w3{grid-column:span 3}.bento .w12{grid-column:span 12}
+.stat{display:flex;flex-direction:column;justify-content:space-between;min-height:190px}
+.stat b{display:block;font-size:var(--s4);font-weight:600;letter-spacing:-.04em;line-height:1;margin-bottom:.15em}
+.stat b span{color:var(--acc-ink)}.stat p{margin:0;color:var(--mut)}
+.stat .src{margin-top:14px}
+.chip{display:inline-flex;align-items:center;gap:6px;font:500 13px/1 var(--mono);padding:7px 11px;border-radius:99px;border:1px solid var(--line2);color:var(--mut);background:var(--surf);white-space:nowrap}
+.chip.on{color:var(--on-acc);background:var(--acc);border-color:var(--acc)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin:14px 0}
+.kv{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;margin:22px 0}
+.kv div{background:var(--surf);padding:14px 16px}.kv dt{font:500 11.5px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.07em;color:var(--dim);margin-bottom:6px}.kv dd{margin:0;font-weight:560}
+.tldr{border:1px solid var(--line);border-left:3px solid var(--acc);background:var(--surf);border-radius:12px;padding:16px 20px;margin:20px 0;color:var(--mut)}
+.tldr strong{color:var(--ink)}
+/* product visuals */
+.pv{position:relative;display:grid;place-items:center;aspect-ratio:1;border-radius:var(--r2);background:radial-gradient(60% 60% at 50% 45%,var(--glow),transparent 70%),linear-gradient(180deg,var(--surf),var(--bg2));border:1px solid var(--line);overflow:hidden}
+.pv img{width:78%;height:auto;filter:drop-shadow(0 30px 40px rgba(0,0,0,.45))}
+.pv:after{content:"";position:absolute;inset:auto 15% 9% 15%;height:14%;background:radial-gradient(closest-side,rgba(0,0,0,.45),transparent);z-index:-1}
+.pcard{display:flex;flex-direction:column;gap:10px}.pcard .pv{aspect-ratio:4/3;margin:-6px -6px 8px}.pcard .pv img{width:52%}
+.pcard .meta{font:500 12.5px/1.5 var(--mono);color:var(--dim)}
+.specs-mini{list-style:none;padding:0;margin:0;font-size:14px;color:var(--mut)}.specs-mini li{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-top:1px solid var(--line)}.specs-mini li span:last-child{color:var(--ink);text-align:right}
+/* tables */
+.tbl{width:100%;border-collapse:collapse;font-size:15px}
+.tbl th,.tbl td{padding:12px 14px;border-bottom:1px solid var(--line);text-align:left;vertical-align:top}
+.tbl tbody th{font-weight:500;color:var(--mut);width:42%}.tbl td{font-family:var(--mono);font-size:14px}
+.tbl thead th{font:500 12px/1.3 var(--mono);text-transform:uppercase;letter-spacing:.06em;color:var(--dim)}
+.tbl caption{caption-side:bottom;text-align:left;padding-top:12px}
+.tbl .cur{background:var(--tbc-bg)}
+.scroller{overflow-x:auto;border:1px solid var(--line);border-radius:var(--r);background:var(--surf)}
+details.faq{border-top:1px solid var(--line);padding:4px 0}
+details.faq:last-of-type{border-bottom:1px solid var(--line)}
+details.faq summary{cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:20px;padding:18px 0;font-weight:560;font-size:var(--s1);letter-spacing:-.01em}
+details.faq summary::-webkit-details-marker{display:none}
+details.faq summary:after{content:"+";font:400 24px/1 var(--mono);color:var(--acc-ink);transition:transform .3s}
+details.faq[open] summary:after{transform:rotate(45deg)}
+details.faq p{color:var(--mut);max-width:75ch;padding-bottom:12px}
+.split{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(24px,5vw,72px)}
+.sticky{position:sticky;top:100px;align-self:start}
+.steps{counter-reset:s;display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,240px),1fr));list-style:none;padding:0;margin:0}
+.steps li{counter-increment:s}.steps li:before{content:"0" counter(s);display:block;font:500 13px/1 var(--mono);color:var(--acc-ink);margin-bottom:28px}
+.checks{list-style:none;padding:0;margin:0;columns:2 320px;column-gap:40px}.checks li{break-inside:avoid;padding:10px 0 10px 28px;border-top:1px solid var(--line);position:relative;color:var(--mut)}
+.checks li:before{content:"";position:absolute;left:2px;top:17px;width:10px;height:10px;border-radius:50%;background:var(--acc);box-shadow:0 0 10px var(--glow)}
+.answers{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(min(100%,360px),1fr))}
+.answers article h3{font-size:var(--s0);font-weight:600}.answers article p{color:var(--mut);margin:0 0 10px}
+.cta-band{border-radius:var(--r2);padding:clamp(28px,6vw,72px);background:radial-gradient(80% 120% at 85% 0%,var(--glow),transparent 60%),linear-gradient(180deg,var(--surf2),var(--surf));border:1px solid var(--line2);display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:28px;align-items:end}
+.cta-band h2{margin:0}
+/* forms */
+.field{display:flex;flex-direction:column;gap:6px;font-weight:560;font-size:14.5px}
+.field small{font-weight:400;color:var(--dim);font-size:12.5px}
+input,select,button{font:inherit}
+.field input,.field select{width:100%;min-width:0;box-sizing:border-box;min-height:46px;padding:0 14px;border-radius:12px;border:1px solid var(--line2);background:var(--bg2);color:var(--ink);font-family:var(--mono);font-size:15px}
+.field input:focus,.field select:focus{border-color:var(--acc);outline:none;box-shadow:0 0 0 4px var(--glow2)}
+fieldset{border:0;padding:0;margin:0;min-width:0}legend{font-weight:560;font-size:14.5px;margin-bottom:8px;padding:0}
+.seg{display:flex;flex-wrap:wrap;gap:6px}.seg label{position:relative}.seg input{position:absolute;opacity:0;inset:0;cursor:pointer}
+.seg span{display:inline-flex;min-height:40px;align-items:center;padding:0 14px;border-radius:99px;border:1px solid var(--line2);font-size:14px;color:var(--mut);transition:all .2s}
+.seg input:checked+span{background:var(--acc);color:var(--on-acc);border-color:var(--acc);box-shadow:0 0 20px -4px var(--glow)}
+.seg input:focus-visible+span{outline:2px solid var(--acc);outline-offset:2px}
+input[type=range]{width:100%;accent-color:var(--acc);min-height:30px}
+/* simulator */
+.sim{border-radius:var(--r2);border:1px solid var(--line2);background:linear-gradient(180deg,var(--surf),var(--bg2));padding:14px;box-shadow:var(--shadow)}
+.sim svg{display:block;width:100%;height:auto;border-radius:18px}
+.sim .zone rect.fl{fill:var(--bg2);stroke:var(--line2);stroke-width:1.5}
+.sim .halo{opacity:0;transition:opacity .9s ease}
+.sim .zone.on .halo{opacity:1}.sim .zone.dim .halo{opacity:.28}
+.sim .lum{fill:var(--line2);transition:fill .6s}.sim .zone.on .lum,.sim .zone.dim .lum{fill:var(--acc)}
+.sim .det{fill:var(--surf2);stroke:var(--mut);stroke-width:1.5}.sim .zone.on .det{stroke:var(--acc)}
+.sim .ring{fill:none;stroke:var(--acc);stroke-width:1.2;opacity:0}
+.sim .zone.on .ring{animation:ping 2.2s ease-out infinite}
+.sim .lbl{font:500 11px var(--mono);fill:var(--dim);letter-spacing:.04em}.sim .zone.on .lbl{fill:var(--ink)}
+.sim .pct{font:600 12px var(--mono);fill:var(--acc-ink)}
+.sim #person{cursor:grab;outline:none}.sim #person:focus-visible .pring{stroke:var(--acc);stroke-width:3}
+.sim .win{stroke:var(--cool);stroke-width:4;stroke-linecap:round}
+.sim-ui{display:flex;flex-wrap:wrap;gap:14px 24px;align-items:center;justify-content:space-between;padding:12px 6px 2px}
+.sim-ui label{display:flex;gap:10px;align-items:center;font-size:13.5px;color:var(--mut);flex:1 1 220px}
+.sim-status{font:500 12.5px/1.4 var(--mono);color:var(--mut)}
+@keyframes ping{0%{opacity:.7;transform:scale(.4)}100%{opacity:0;transform:scale(1.6)}}
+.sim .ring{transform-box:fill-box;transform-origin:center}
+/* coverage */
+.cov{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,5fr);gap:clamp(20px,4vw,56px);align-items:center}
+.cov svg{width:100%;height:auto;border-radius:var(--r2);background:var(--bg2);border:1px solid var(--line)}
+.cov .r{fill:var(--glow2);stroke:var(--acc);stroke-width:.12;transition:opacity .4s,fill .4s}
+.cov[data-sel] .r{opacity:.18}.cov[data-sel=t] .r.t,.cov[data-sel=f] .r.f,.cov[data-sel=s] .r.s{opacity:1;fill:var(--glow)}
+.cov .grid-l{stroke:var(--line);stroke-width:.05}
+.cov .sweep{transform-origin:0 0;animation:spin 6s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.cov-legend{list-style:none;padding:0;margin:0;display:grid;gap:8px}
+.cov-legend button{all:unset;box-sizing:border-box;width:100%;display:grid;grid-template-columns:auto 1fr auto;gap:14px;align-items:center;padding:14px 16px;border:1px solid var(--line);border-radius:14px;cursor:pointer;background:var(--surf)}
+.cov-legend button[aria-pressed=true]{border-color:var(--acc);box-shadow:0 0 0 4px var(--glow2)}
+.cov-legend button:focus-visible{outline:2px solid var(--acc)}
+.cov-legend i{width:12px;height:12px;border-radius:50%;border:2px solid var(--acc)}
+.cov-legend b{font:600 var(--s1)/1 var(--mono);letter-spacing:-.02em}
+/* gallery */
+.gal{display:grid;gap:10px;min-width:0}.pdp-g{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.sec-g{grid-template-columns:minmax(0,7fr) minmax(0,5fr)}.feat-g{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:20px;align-items:center}
+.gal-main{display:grid;grid-auto-flow:column;grid-auto-columns:100%;overflow-x:auto;scroll-snap-type:x mandatory;border-radius:var(--r2);scrollbar-width:none}
+.gal-main::-webkit-scrollbar{display:none}.gal-main figure{margin:0;scroll-snap-align:start}
+.gal-main .pv.plan{background:#fff}.gal-main .pv.plan img{filter:none;width:86%}
+.gal-th{display:flex;gap:8px}.gal-th a{display:block;width:72px;height:72px;border-radius:12px;border:1px solid var(--line2);background:var(--surf);overflow:hidden;padding:6px}
+.gal-th a[aria-current=true]{border-color:var(--acc)}.gal-th img{width:100%;height:100%;object-fit:contain}
+.subnav{position:sticky;top:64px;z-index:40;background:color-mix(in srgb,var(--bg) 85%,transparent);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.subnav ul{list-style:none;display:flex;gap:4px;margin:0 auto;padding:8px clamp(18px,4vw,40px);overflow-x:auto;max-width:var(--max);scrollbar-width:none}
+.subnav a{display:block;padding:7px 12px;border-radius:99px;text-decoration:none;font:500 13px/1 var(--mono);color:var(--mut);white-space:nowrap}.subnav a:hover{background:var(--surf2);color:var(--ink)}
+/* finder */
+.finder{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,8fr);gap:clamp(20px,4vw,48px);align-items:start}
+.finder form{display:grid;gap:22px}
+.fcount{font:500 13px/1.4 var(--mono);color:var(--mut)}
+.pcard[hidden]{display:none}
+.empty{display:none}.empty.show{display:block}
+/* calc */
+.calc{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:clamp(20px,4vw,48px);align-items:start}
+.calc form{display:grid;gap:18px;grid-template-columns:1fr 1fr}
+.calc form .full{grid-column:1/-1}
+.out{display:grid;gap:14px}
+.big{font-size:var(--s4);font-weight:600;letter-spacing:-.04em;line-height:1}.big small{font-size:var(--s0);font-weight:500;color:var(--mut);letter-spacing:0;margin-left:.3em}
+.bar{height:14px;border-radius:99px;background:var(--surf2);overflow:hidden;border:1px solid var(--line)}
+.bar i{display:block;height:100%;border-radius:99px;background:linear-gradient(90deg,var(--acc2),var(--acc));box-shadow:0 0 20px var(--glow);transition:width .5s}
+.bar.base i{background:var(--line2);box-shadow:none}
+.formula{font:500 13.5px/1.8 var(--mono);color:var(--mut);background:var(--bg2);border:1px solid var(--line);border-radius:14px;padding:16px 18px;overflow-x:auto}
+.formula code{display:block;font:inherit;color:var(--ink);white-space:normal}.calc form>*,.finder>*{min-width:0}
+.formula b{color:var(--acc-ink);font-weight:600}
+/* timeline */
+.tl{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(230px,1fr);gap:14px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x proximity}
+.tl li{list-style:none;scroll-snap-align:start;border-top:2px solid var(--line2);padding-top:16px;position:relative}
+.tl li:before{content:"";position:absolute;top:-7px;left:0;width:12px;height:12px;border-radius:50%;background:var(--acc);box-shadow:0 0 14px var(--glow)}
+.tl b{font:600 var(--s2)/1 var(--mono);letter-spacing:-.03em;display:block;margin-bottom:10px}
+.art{width:100%;height:auto;display:block}
+.art .st{stroke:var(--line2);fill:none;stroke-width:1.5}.art .fi{fill:var(--surf2)}.art .lt{fill:url(#lg)}
+.toc ol{list-style:none;padding:0;margin:0}.toc{min-width:0;list-style:none;padding:0;margin:0;font-size:14px;border-left:1px solid var(--line)}.toc a{display:block;padding:6px 0 6px 16px;color:var(--mut);text-decoration:none;margin-left:-1px;border-left:1px solid transparent}.toc a:hover{color:var(--ink);border-color:var(--acc)}
+article.prose{max-width:72ch}article.prose h2{font-size:var(--s2);margin-top:2em}article.prose ul{padding-left:1.2em;color:var(--mut)}article.prose li{margin:.4em 0}
+.prose p{color:var(--mut)}.prose strong{color:var(--ink)}
+footer.site{margin-top:40px;border-top:1px solid var(--line);background:linear-gradient(180deg,var(--bg),var(--bg2));padding:clamp(48px,7vw,96px) 0 32px;font-size:14.5px;color:var(--mut)}
+.f-big{font-size:var(--s4);font-weight:620;letter-spacing:-.045em;line-height:1;color:var(--ink);margin:0 0 48px;max-width:16ch}
+.f-big span{color:var(--acc-ink)}
+.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:28px}.fgrid strong{color:var(--ink);display:block;margin-bottom:6px;font-weight:600}
+.fgrid a{color:var(--mut);display:inline-block;padding:4px 0;min-height:24px;min-width:24px}.fgrid a:hover{color:var(--acc-ink)}
+.f-bot{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;margin-top:48px;padding-top:20px;border-top:1px solid var(--line)}
+/* motion */
+@media (prefers-reduced-motion:no-preference){
+ @supports (animation-timeline:view()){
+  .reveal{animation:rise linear both;animation-timeline:view();animation-range:entry 0% entry 40%}
+  @keyframes rise{from{opacity:.001;transform:translateY(28px) scale(.985)}to{opacity:1;transform:none}}
+  .hero:before{animation:drift linear both;animation-timeline:scroll(root);animation-range:0 600px}
+  @keyframes drift{to{transform:translateY(120px) scale(1.15);opacity:.4}}
+ }
+}
+@media (prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}@view-transition{navigation:none}}
+/* responsive */
+@media (max-width:980px){.hero-g,.split,.finder,.calc,.cov,.cta-band{grid-template-columns:minmax(0,1fr)}.sticky{position:static}
+ .bento>*,.bento .w3,.bento .w6,.bento .w8{grid-column:span 6}}
+@media (max-width:640px){.feat-g{grid-template-columns:minmax(0,1fr)}.bento>*,.bento .w3,.bento .w6,.bento .w8{grid-column:span 12}.calc form{grid-template-columns:1fr}
+ .hd{flex-wrap:wrap;gap:6px 12px;padding-top:6px}nav.main{order:3;width:100%;margin:0 -8px}.hd-act{margin-left:auto}.hd-act .btn{display:none}
+ .stat{min-height:0}.tbl tbody th{width:46%}.proto{font-size:11px}}
+main,footer{overflow-x:clip}details.faq summary{overflow-wrap:anywhere}details.faq summary>*{min-width:0}
 </style>
 <script type="application/ld+json">{
  "@context": "https://schema.org",
@@ -148,76 +337,177 @@ form.calc small{font-weight:400;color:var(--mut)}
    "@id": "https://migure89.github.io/beg-luxomat-prototipo/es/#webpage",
    "url": "https://migure89.github.io/beg-luxomat-prototipo/es/",
    "name": "Detectores de presencia y control de iluminación | B.E.G.",
+   "inLanguage": "es-ES",
    "isPartOf": {
     "@id": "https://www.beg-luxomat.com/es/#website"
    },
    "about": {
     "@id": "https://www.beg-luxomat.com/#organization"
    },
-   "inLanguage": "es-ES",
    "primaryImageOfPage": {
     "@type": "ImageObject",
-    "url": "https://migure89.github.io/beg-luxomat-prototipo/assets/img/93546-detector-presencia-beg-400.webp"
+    "url": "https://migure89.github.io/beg-luxomat-prototipo/assets/img/og-beg-hispania.jpg"
    }
+  },
+  {
+   "@type": "FAQPage",
+   "@id": "https://migure89.github.io/beg-luxomat-prototipo/es/#respuestas",
+   "mainEntity": [
+    {
+     "@type": "Question",
+     "name": "¿Qué es un detector de presencia?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Un sensor, normalmente PIR (infrarrojo pasivo), que detecta personas, incluidos movimientos pequeños como los de alguien sentado, y mide la luz natural para encender, apagar o regular la iluminación solo cuando hace falta."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Cuánta energía se ahorra con detectores de presencia?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Según B.E.G., hasta un 50 % en oficinas, hasta un 60 % en almacenes de gran altura y hasta un 80 % en aseos. Son máximos del fabricante; el ahorro real depende de la ocupación y la luz natural."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿DALI-2, KNX o 230 V?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "230 V para estancias individuales sin bus; DALI-2 para regular luminarias DALI, con o sin controlador externo; KNX cuando el edificio integra iluminación, clima y persianas en un bus KNX."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Qué alcance tiene el detector de techo PD4N?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Máx. Ø 24 m en movimiento transversal, Ø 8 m frontal y Ø 6,4 m en actividad sedentaria; 450 m² a 2,5 m de altura de montaje (rango de montaje 2–10 m)."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿Dónde se compran los productos B.E.G.?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Exclusivamente a través de distribuidores de material eléctrico. Si no los encuentra en su distribuidor habitual, B.E.G. Hispania le orienta."
+     }
+    },
+    {
+     "@type": "Question",
+     "name": "¿B.E.G. ayuda a diseñar el proyecto?",
+     "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Sí: envíe el plano CAD y recibirá sin cargo una propuesta con los productos más adecuados. Los integradores de B.E.G. ponen en marcha in situ sistemas DALI complejos."
+     }
+    }
+   ]
   }
  ]
 }</script>
+<script src="../assets/app.js" defer></script>
 </head>
 <body>
+<a class="skip" href="#main">Saltar al contenido</a>
 <div class="proto" role="note">Prototipo de propuesta SEO/GEO – no es la web oficial de B.E.G.</div>
 <header class="site"><div class="wrap hd">
-<a class="logo" href="./"><img src="../assets/img/beg-logo.svg" width="40" height="40" alt="Logotipo de B.E.G."><span>B.E.G. Hispania</span></a>
-<nav class="main" aria-label="Principal"><ul><li><a href="productos/">Productos</a></li><li><a href="soluciones/industrias/">Sectores</a></li><li><a href="guias/como-elegir-un-detector-de-presencia/">Guía</a></li><li><a href="herramientas/calculadora-de-ahorro-energetico/">Calculadora de ahorro</a></li><li><a href="empresa/conoce-beg/">Sobre B.E.G.</a></li><li><a href="contacto/">Contacto</a></li></ul></nav>
+<a class="logo" href="./"><img src="../assets/img/beg-logo.svg" width="34" height="34" alt="Logotipo de B.E.G."><span>B.E.G. Hispania<small>Lighting control</small></span></a>
+<nav class="main" aria-label="Principal"><ul><li><a href="productos/">Productos</a></li><li><a href="productos/encuentra-tu-detector/">Encuentra tu detector</a></li><li><a href="soluciones/industrias/">Sectores</a></li><li><a href="guias/">Guías</a></li><li><a href="herramientas/calculadora-de-ahorro-energetico/">Calculadora</a></li><li><a href="empresa/conoce-beg/">Empresa</a></li><li><a href="contacto/">Contacto</a></li></ul></nav>
+<div class="hd-act"><button class="iconbtn" id="theme" type="button" aria-label="Cambiar entre modo oscuro y claro"><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><circle cx="12" cy="12" r="4.2"/><path d="M12 2v2.5M12 19.5V22M4.2 4.2l1.8 1.8M18 18l1.8 1.8M2 12h2.5M19.5 12H22M4.2 19.8 6 18M18 6l1.8-1.8"/></svg><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a8 8 0 1 0 10.5 10.5Z"/></svg></button>
+<a class="btn pri sm" href="contacto/#proyecto">Proyecto</a></div>
 </div></header>
-<main class="wrap">
+<main id="main">
 
 
-<section class="hero">
+<section class="hero"><div class="wrap hero-g">
 <div>
-<h1>Detectores de presencia y control de iluminación para edificios profesionales</h1>
-<p class="lead">B.E.G. desarrolla y fabrica en Alemania desde 1975 detectores de movimiento y presencia, sensores y actuadores para controlar automáticamente la iluminación y la climatización en oficinas, hospitales, centros logísticos, hoteles y escuelas. En España, B.E.G. Hispania asesora a ingenierías, integradores, instaladores y arquitectos.</p>
-<a class="btn" href="productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/">Ver detectores de presencia de techo</a><a class="btn sec" href="contacto/">Solicitar asesoramiento de proyecto</a>
+<p class="eyebrow">B.E.G. Hispania · Fabricante alemán desde 1975</p>
+<h1><span class="display">Luz solo donde <em>hay alguien.</em></span><span class="h1-sub">Detectores de presencia y control de iluminación para edificios profesionales.</span></h1>
+<p class="lead">Sensores que detectan a las personas y miden la luz natural para encender, regular o apagar solo lo necesario. En 230 V, DALI-2 y KNX, con asesoramiento técnico en España.</p>
+<div class="ctas"><a class="btn pri" href="productos/encuentra-tu-detector/">Encuentra tu detector <span class="ar" aria-hidden="true">→</span></a><a class="btn ghost" href="contacto/#proyecto">Enviar plano CAD</a></div>
+<p class="src" style="margin-top:18px">Propuesta de proyecto sin cargo a partir de su plano CAD · Venta a través de distribuidores de material eléctrico.</p>
 </div>
-<img src="../assets/img/93546-detector-presencia-beg-400.webp" srcset="../assets/img/93546-detector-presencia-beg-200.webp 200w, ../assets/img/93546-detector-presencia-beg-400.webp 400w" sizes="(max-width: 600px) 90vw, 400px" width="400" height="400" alt="Detector de presencia de techo B.E.G. PD4N-BMS DALI-2" fetchpriority="high" decoding="async" class="">
-</section>
-<div class="tldr"><strong>En resumen:</strong> sensores y sistemas de control de iluminación para soluciones on/off, KNX, BMS DALI-2, DALI-LINK, DALI-SYS y Casambi. Venta exclusiva a través de distribuidores de material eléctrico. Propuesta técnica sin cargo a partir de su plano CAD.</div>
-<h2>Gama de productos</h2>
-<div class="grid">
-<div class="card"><h3><a href="productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/">Detectores de presencia de techo</a></h3><p class="meta">Control de la iluminación según presencia y luz natural, en versiones 230 V, DALI-2 y KNX.</p></div>
-<div class="card"><h3><a href="https://www.beg-luxomat.com/es/productos/detectores-de-movimiento-y-presencia/">Detectores de movimiento y presencia</a></h3><p class="meta">Control de iluminación profesional mediante sensores sencillos.</p></div>
-<div class="card"><h3><a href="https://www.beg-luxomat.com/es/productos/sistemas-de-control/">Sistemas de control</a></h3><p class="meta">Sistemas en red para el control integral de edificios: KNX, BMS DALI-2, DALI-LINK, DALI-SYS, Casambi.</p></div>
-<div class="card"><h3><a href="https://www.beg-luxomat.com/es/productos/luminarias-y-emergencias/">Luminarias y emergencias</a></h3><p class="meta">Tecnología LED con y sin detección de movimiento.</p></div>
-<div class="card"><h3><a href="https://www.beg-luxomat.com/es/productos/programadores-horarios/">Programadores horarios</a></h3><p class="meta">Confort y seguridad mediante iluminación temporizada.</p></div>
+<figure class="sim" id="sim" style="margin:0">
+<svg id="simsvg" viewBox="0 0 800 520" role="group" aria-labelledby="sim-t" aria-describedby="sim-d">
+<title id="sim-t">Simulación de una planta de oficinas con detectores de presencia</title>
+<desc id="sim-d">Planta esquemática con seis zonas. La zona donde está la persona se ilumina; el pasillo mantiene luz de orientación y el resto permanece apagado. Con más luz natural, las zonas con ventana necesitan menos luz artificial.</desc>
+<defs><radialGradient id="halo"><stop offset="0" style="stop-color:var(--acc);stop-opacity:.75"/><stop offset=".5" style="stop-color:var(--acc2);stop-opacity:.22"/><stop offset="1" style="stop-color:var(--acc2);stop-opacity:0"/></radialGradient></defs>
+<rect x="20" y="20" width="760" height="480" rx="18" style="fill:var(--bg);stroke:var(--line2)"/>
+<g class="zone on" id="z1" data-x="40" data-y="40" data-w="220" data-h="200" data-win="1" data-name="Despacho 1"><clipPath id="cz1"><rect x="40" y="40" width="220" height="200" rx="10"/></clipPath><rect class="fl" x="40" y="40" width="220" height="200" rx="10"/><rect class="day" x="40" y="40" width="220" height="200" rx="10" style="fill:var(--cool)" opacity="0.035"/><g clip-path="url(#cz1)"><circle class="halo" cx="150.0" cy="140.0" r="165" fill="url(#halo)"/></g><path class="win" d="M70 40h160" opacity="0.58"/><rect class="lum" x="99" y="94" width="28" height="4" rx="2"/><rect class="lum" x="173" y="94" width="28" height="4" rx="2"/><circle class="ring" cx="150.0" cy="140.0" r="22"/><circle class="det" cx="150.0" cy="140.0" r="7"/><text class="lbl" x="54" y="62">DESPACHO 1</text><text class="pct" x="246" y="226" text-anchor="end">72 %</text></g><g class="zone " id="z2" data-x="270" data-y="40" data-w="220" data-h="200" data-win="1" data-name="Despacho 2"><clipPath id="cz2"><rect x="270" y="40" width="220" height="200" rx="10"/></clipPath><rect class="fl" x="270" y="40" width="220" height="200" rx="10"/><rect class="day" x="270" y="40" width="220" height="200" rx="10" style="fill:var(--cool)" opacity="0.035"/><g clip-path="url(#cz2)"><circle class="halo" cx="380.0" cy="140.0" r="165" fill="url(#halo)"/></g><path class="win" d="M300 40h160" opacity="0.58"/><rect class="lum" x="329" y="94" width="28" height="4" rx="2"/><rect class="lum" x="403" y="94" width="28" height="4" rx="2"/><circle class="ring" cx="380.0" cy="140.0" r="22"/><circle class="det" cx="380.0" cy="140.0" r="7"/><text class="lbl" x="284" y="62">DESPACHO 2</text><text class="pct" x="476" y="226" text-anchor="end">0 %</text></g><g class="zone " id="z3" data-x="500" data-y="40" data-w="260" data-h="200" data-win="1" data-name="Sala de reuniones"><clipPath id="cz3"><rect x="500" y="40" width="260" height="200" rx="10"/></clipPath><rect class="fl" x="500" y="40" width="260" height="200" rx="10"/><rect class="day" x="500" y="40" width="260" height="200" rx="10" style="fill:var(--cool)" opacity="0.035"/><g clip-path="url(#cz3)"><circle class="halo" cx="630.0" cy="140.0" r="195" fill="url(#halo)"/></g><path class="win" d="M530 40h200" opacity="0.58"/><rect class="lum" x="573" y="94" width="28" height="4" rx="2"/><rect class="lum" x="659" y="94" width="28" height="4" rx="2"/><circle class="ring" cx="630.0" cy="140.0" r="22"/><circle class="det" cx="630.0" cy="140.0" r="7"/><text class="lbl" x="514" y="62">SALA DE REUNIONES</text><text class="pct" x="746" y="226" text-anchor="end">0 %</text></g><g class="zone dim" id="z4" data-x="40" data-y="250" data-w="720" data-h="70" data-win="0" data-name="Pasillo"><clipPath id="cz4"><rect x="40" y="250" width="720" height="70" rx="10"/></clipPath><rect class="fl" x="40" y="250" width="720" height="70" rx="10"/><rect class="day" x="40" y="250" width="720" height="70" rx="10" style="fill:var(--cool)" opacity="0.000"/><g clip-path="url(#cz4)"><circle class="halo" cx="400.0" cy="285.0" r="540" fill="url(#halo)"/></g><rect class="lum" x="170" y="283" width="28" height="4" rx="2"/><rect class="lum" x="314" y="283" width="28" height="4" rx="2"/><rect class="lum" x="458" y="283" width="28" height="4" rx="2"/><rect class="lum" x="602" y="283" width="28" height="4" rx="2"/><circle class="ring" cx="400.0" cy="285.0" r="22"/><circle class="det" cx="400.0" cy="285.0" r="7"/><text class="lbl" x="54" y="272">PASILLO</text><text class="pct" x="746" y="306" text-anchor="end">20 %</text></g><g class="zone " id="z5" data-x="40" data-y="330" data-w="480" data-h="150" data-win="1" data-name="Oficina diáfana"><clipPath id="cz5"><rect x="40" y="330" width="480" height="150" rx="10"/></clipPath><rect class="fl" x="40" y="330" width="480" height="150" rx="10"/><rect class="day" x="40" y="330" width="480" height="150" rx="10" style="fill:var(--cool)" opacity="0.035"/><g clip-path="url(#cz5)"><circle class="halo" cx="280.0" cy="405.0" r="360" fill="url(#halo)"/></g><path class="win" d="M70 480h420" opacity="0.58"/><rect class="lum" x="122" y="370" width="28" height="4" rx="2"/><rect class="lum" x="218" y="370" width="28" height="4" rx="2"/><rect class="lum" x="314" y="370" width="28" height="4" rx="2"/><rect class="lum" x="410" y="370" width="28" height="4" rx="2"/><circle class="ring" cx="280.0" cy="405.0" r="22"/><circle class="det" cx="280.0" cy="405.0" r="7"/><text class="lbl" x="54" y="352">OFICINA DIÁFANA</text><text class="pct" x="506" y="466" text-anchor="end">0 %</text></g><g class="zone " id="z6" data-x="530" data-y="330" data-w="230" data-h="150" data-win="0" data-name="Aseos"><clipPath id="cz6"><rect x="530" y="330" width="230" height="150" rx="10"/></clipPath><rect class="fl" x="530" y="330" width="230" height="150" rx="10"/><rect class="day" x="530" y="330" width="230" height="150" rx="10" style="fill:var(--cool)" opacity="0.000"/><g clip-path="url(#cz6)"><circle class="halo" cx="645.0" cy="405.0" r="172" fill="url(#halo)"/></g><rect class="lum" x="593" y="370" width="28" height="4" rx="2"/><rect class="lum" x="669" y="370" width="28" height="4" rx="2"/><circle class="ring" cx="645.0" cy="405.0" r="22"/><circle class="det" cx="645.0" cy="405.0" r="7"/><text class="lbl" x="544" y="352">ASEOS</text><text class="pct" x="746" y="466" text-anchor="end">0 %</text></g>
+<g id="person" tabindex="0" role="button" aria-label="Persona: arrástrela o use las flechas del teclado para moverla por la planta" transform="translate(150 175)" style="touch-action:none">
+<circle r="26" style="fill:var(--acc);opacity:.18"/><circle class="pring" r="13" style="fill:var(--ink);stroke:var(--bg);stroke-width:3"/><circle r="5" cy="-2" style="fill:var(--bg)"/></g>
+</svg>
+<div class="sim-ui">
+<label for="daylight">Luz natural exterior<input id="daylight" type="range" min="0" max="100" value="35" aria-describedby="sim-status"></label>
+<div class="chips" style="margin:0" role="group" aria-label="Mover la persona a una zona"><button type="button" class="chip" data-go="z1">Despacho 1</button><button type="button" class="chip" data-go="z2">Despacho 2</button><button type="button" class="chip" data-go="z3">Sala de reuniones</button><button type="button" class="chip" data-go="z4">Pasillo</button><button type="button" class="chip" data-go="z5">Oficina diáfana</button><button type="button" class="chip" data-go="z6">Aseos</button></div>
 </div>
-<h2>Soluciones por sector</h2>
-<div class="grid">
-<div class="card"><h3><a href="soluciones/industrias/edificio-administrativo/">Oficinas y edificios administrativos</a></h3><p class="meta">Regulación por luz natural y presencia; según B.E.G., hasta un 50 % de ahorro en oficinas.</p></div>
-<div class="card"><h3><a href="soluciones/industrias/hospitales-y-centros-sanitarios/">Hospitales y centros sanitarios</a></h3><p class="meta">Pasillos con luz de orientación, aseos sin contacto y control automático 24 h.</p></div>
-<div class="card"><h3><a href="soluciones/industrias/industria-y-logistica/">Industria y logística</a></h3><p class="meta">Detección fiable en naves y almacenes con alturas de hasta 20 m.</p></div>
-<div class="card"><h3><a href="soluciones/industrias/hoteles/">Hoteles</a></h3><p class="meta">Seguridad en pasillos y aparcamientos, confort para huéspedes e higiene en aseos.</p></div>
-</div>
-<h2>¿Cuánta energía se puede ahorrar con detectores de presencia?</h2>
-<p>Según B.E.G., la automatización controlada por presencia puede ahorrar <strong>hasta un 50 %</strong> del consumo en edificios de oficinas, <strong>hasta un 60 %</strong> en almacenes de gran altura y <strong>hasta un 80 %</strong> en aseos (<a href="https://www.beg-luxomat.com/es/empresa/quienes-somos/ahorrando-energia/">fuente: B.E.G., «Ahorrando energía»</a>). Son valores máximos citados por el fabricante, no garantizados: el ahorro real depende de la ocupación, la luz natural y la instalación previa.</p>
-<p><a class="btn sec" href="herramientas/calculadora-de-ahorro-energetico/">Calcular el ahorro de su instalación</a> <a class="btn sec" href="guias/como-elegir-un-detector-de-presencia/">Guía: cómo elegir un detector de presencia</a></p>
-<h2>Servicio para profesionales</h2>
-<ul>
-<li><strong>Ingenierías y proyectistas:</strong> envíe el plano CAD y recibirá sin cargo una propuesta con los productos más adecuados. Datos BIM y textos de prescripción en cada ficha.</li>
-<li><strong>Integradores de sistemas:</strong> puesta en marcha in situ de sistemas de control de iluminación DALI complejos.</li>
-<li><strong>Instaladores:</strong> consultoría, formación y software para una instalación y configuración rápidas.</li>
-<li><strong>Distribuidores:</strong> los productos B.E.G. se venden exclusivamente a través de distribuidores de material eléctrico.</li>
-</ul>
-<p>Formación y certificaciones del equipo técnico en España: <mark class="tbc">[dato a confirmar por el cliente]</mark></p>
+<figcaption class="sim-ui"><span class="sim-status" id="sim-status" aria-live="polite">Despacho 1: presencia detectada · luz artificial 72 % · pasillo en luz de orientación · resto apagado</span>
+<span class="src">Simulación ilustrativa del principio de funcionamiento, no a escala ni basada en un proyecto real.</span></figcaption>
+</figure>
+</div></section>
 
+<section class="hair"><div class="wrap">
+<div class="sec-hd"><h2>B.E.G. en cifras. Cada una, con su fuente.</h2><p>Datos publicados por el propio fabricante en beg-luxomat.com, consultados el 26-oct-2026.</p></div>
+<div class="bento"><div class="card spot stat reveal w3"><b>1975</b><div><p>Empresa familiar fundada en Lindlar (Alemania).</p><p class="src">Fuente: <a href="https://www.beg-luxomat.com/es/empresa/conoce-beg/">Conoce B.E.G.</a></p></div></div><div class="card spot stat reveal w3"><b>14</b><div><p>Filiales en el extranjero.</p><p class="src">Fuente: <a href="https://www.beg-luxomat.com/es/empresa/conoce-beg/">Conoce B.E.G.</a></p></div></div><div class="card spot stat reveal w3"><b><span>&gt;</span>260</b><div><p>Empleados.</p><p class="src">Fuente: <a href="https://www.beg-luxomat.com/es/empresa/conoce-beg/">Conoce B.E.G.</a></p></div></div><div class="card spot stat reveal w3"><b>ISO</b><div><p>9001 (calidad) e 14001 (gestión ambiental).</p><p class="src">Fuente: <a href="https://www.beg-luxomat.com/es/empresa/conoce-beg/">Conoce B.E.G.</a></p></div></div>
+<div class="card spot reveal w8"><p class="eyebrow">Ahorro máximo citado por B.E.G.</p><h3 style="font-size:var(--s2);margin:.4em 0 .6em">Hasta un 80 % menos de consumo en iluminación, según el espacio.</h3><div style="display:grid;grid-template-columns:minmax(0,120px) minmax(0,1fr) 56px;gap:12px;align-items:center;margin:10px 0"><span class="mut">Oficinas</span><div class="bar"><i style="width:50%"></i></div><b class="mono" style="font-size:15px">≤ 50 %</b></div><div style="display:grid;grid-template-columns:minmax(0,120px) minmax(0,1fr) 56px;gap:12px;align-items:center;margin:10px 0"><span class="mut">Almacenes de gran altura</span><div class="bar"><i style="width:60%"></i></div><b class="mono" style="font-size:15px">≤ 60 %</b></div><div style="display:grid;grid-template-columns:minmax(0,120px) minmax(0,1fr) 56px;gap:12px;align-items:center;margin:10px 0"><span class="mut">Aseos</span><div class="bar"><i style="width:80%"></i></div><b class="mono" style="font-size:15px">≤ 80 %</b></div>
+<p class="src">Fuente: <a href="https://www.beg-luxomat.com/es/empresa/quienes-somos/ahorrando-energia/">B.E.G., «Ahorrando energía»</a>. Valores máximos del fabricante, no garantizados.</p></div>
+<div class="card spot stat reveal w4"><b>2<span> M</span></b><div><p>Productos al año: capacidad tras ampliar el almacén central en 2.000 m² (2020).</p><p class="src">Fuente: <a href="https://www.beg-luxomat.com/es/empresa/conoce-beg/">Conoce B.E.G.</a></p></div></div>
+<div class="card spot stat reveal w6"><b>44<span> t</span></b><div><p>De residuos plásticos evitados al año al sustituir los embalajes de plástico por cartón y papel.</p><p class="src">Fuente: <a href="https://www.beg-luxomat.com/es/empresa/conoce-beg/">Conoce B.E.G.</a></p></div></div>
+<div class="card spot reveal w6"><p class="eyebrow">Sistemas</p><h3 style="font-size:var(--s2);margin:.4em 0">Un sensor, el protocolo de su edificio.</h3><div class="chips"><span class="chip">On/off 230 V</span><span class="chip">KNX</span><span class="chip">BMS DALI-2</span><span class="chip">DALI-LINK</span><span class="chip">DALI-SYS</span><span class="chip">Casambi</span></div><p class="src">Fuente: <a href="https://www.beg-luxomat.com/es/">beg-luxomat.com</a> (soluciones on/off, KNX, BMS DALI-2, DALI-LINK, DALI-SYS y Casambi).</p></div>
+</div></div></section>
+
+<section class="hair"><div class="wrap">
+<div class="sec-hd"><h2>Detecta. Mide. Regula.</h2><p>Lo que hace un detector de presencia B.E.G. en cada estancia, en tres pasos.</p></div>
+<ol class="steps">
+<li class="card reveal"><h3>Detecta presencia</h3><p class="mut">Sensores PIR que registran incluso los movimientos pequeños de una persona sentada (alcance en «actividad sedentaria» en cada ficha).</p></li>
+<li class="card reveal"><h3>Mide la luz natural</h3><p class="mut">Medición continua de la luz mixta (natural + artificial) en la zona de trabajo.</p></li>
+<li class="card reveal"><h3>Añade solo lo que falta</h3><p class="mut">Regula la luz artificial hasta el nivel deseado y apaga tras la temporización cuando la zona queda libre.</p></li>
+</ol></div></section>
+
+<section class="hair"><div class="wrap">
+<div class="sec-hd"><h2>Detectores de presencia de techo PD4N</h2><p>Tres versiones del mismo sensor 360°: elija según el sistema del edificio.</p></div>
+<div class="grid g3"><article class="card spot pcard reveal"><div class="pv"><img src="../assets/img/93546-detector-presencia-beg-240.webp" srcset="../assets/img/93546-detector-presencia-beg-240.webp 240w, ../assets/img/93546-detector-presencia-beg-480.webp 480w, ../assets/img/93546-detector-presencia-beg-720.webp 720w" sizes="240px" width="240" height="240" alt="Detector de presencia de techo B.E.G. PD4N-BMS DALI-2" loading="lazy" decoding="async" class="" style="view-transition-name:prod-93546"></div><p class="meta">Ref. 93546 · EAN 4007529935468</p><h3><a href="productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/pd4n-bms-dali-2-93546/">PD4N-BMS DALI-2</a></h3><div class="chips" style="margin:0"><span class="chip">DALI-2 · BMS (input device)</span><span class="chip">Ø 24 m</span></div><ul class="specs-mini"><li><span>Alimentación</span><span>del bus DALI, máx. 22.5 V DC</span></li><li><span>Montaje</span><span>2 m / 10 m / 2.5 m</span></li><li><span>Cobertura</span><span>450 m² / 2.5 m Altura de montaje</span></li></ul></article><article class="card spot pcard reveal"><div class="pv"><img src="../assets/img/93460-detector-presencia-beg-240.webp" srcset="../assets/img/93460-detector-presencia-beg-240.webp 240w, ../assets/img/93460-detector-presencia-beg-480.webp 480w, ../assets/img/93460-detector-presencia-beg-720.webp 720w" sizes="240px" width="240" height="240" alt="Detector de presencia de techo B.E.G. PD4N-M-DACO DALI-2" loading="lazy" decoding="async" class="" style="view-transition-name:prod-93460"></div><p class="meta">Ref. 93460 · EAN 4007529934607</p><h3><a href="productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/pd4n-m-daco-dali-2-93460/">PD4N-M-DACO DALI-2</a></h3><div class="chips" style="margin:0"><span class="chip">DALI-2 · controlador integrado</span><span class="chip">Ø 24 m</span></div><ul class="specs-mini"><li><span>Alimentación</span><span>230 V AC ±10% 50 Hz</span></li><li><span>Montaje</span><span>2 m / 10 m / 2.5 m</span></li><li><span>Cobertura</span><span>450 m² / 2.5 m Altura de montaje</span></li></ul></article><article class="card spot pcard reveal"><div class="pv"><img src="../assets/img/93514-detector-presencia-beg-240.webp" srcset="../assets/img/93514-detector-presencia-beg-240.webp 240w, ../assets/img/93514-detector-presencia-beg-480.webp 480w, ../assets/img/93514-detector-presencia-beg-720.webp 720w" sizes="240px" width="240" height="240" alt="Detector de presencia de techo B.E.G. PD4N-KNXs-ST-FT" loading="lazy" decoding="async" class="" style="view-transition-name:prod-93514"></div><p class="meta">Ref. 93514 · EAN 4007529935147</p><h3><a href="productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/pd4n-knxs-st-ft-93514/">PD4N-KNXs-ST-FT</a></h3><div class="chips" style="margin:0"><span class="chip">KNX</span><span class="chip">Ø 24 m</span></div><ul class="specs-mini"><li><span>Alimentación</span><span>vía bus KNX</span></li><li><span>Montaje</span><span>2 m / 10 m / 2.5 m</span></li><li><span>Cobertura</span><span>450 m² / 2.5 m Altura de montaje</span></li></ul></article></div>
+<form class="card reveal" action="productos/encuentra-tu-detector/" method="get" style="margin-top:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;align-items:end">
+<div class="field"><label for="h-sys">Sistema</label><select id="h-sys" name="sistema"><option value="">Cualquiera</option><option value="dali-bms">DALI-2 · BMS (input device)</option><option value="dali-daco">DALI-2 · controlador integrado</option><option value="knx">KNX</option></select></div>
+<div class="field"><label for="h-app">Aplicación</label><select id="h-app" name="aplicacion"><option value="">Cualquiera</option><option value="oficinas">Oficinas y salas de reuniones</option><option value="educacion">Aulas y salas de seminarios</option><option value="paso">Pasillos, vestíbulos y escaleras</option><option value="grandes">Grandes áreas, naves, garajes y logística</option></select></div>
+<div class="field"><label for="h-alt">Altura de montaje (m)</label><input id="h-alt" name="altura" type="number" min="1" max="30" step="0.5" inputmode="decimal" placeholder="p. ej. 3"></div>
+<button class="btn pri" type="submit">Ver detectores compatibles <span class="ar" aria-hidden="true">→</span></button>
+</form>
+<p class="src"><a href="productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/">Ver la categoría completa de detectores de presencia para techo (230 V, DALI-2 y KNX)</a>. Datos: fichas oficiales de beg-luxomat.com.</p>
+</div></section>
+
+<section class="hair"><div class="wrap">
+<div class="sec-hd"><h2>Cada edificio tiene su propio ritmo.</h2><p>Soluciones por sector, con los productos y el marco normativo de cada caso.</p></div>
+<div class="bento"><article class="card spot reveal w6"><svg class="art" viewBox="0 0 320 200" role="img" aria-label="Ilustración abstracta: oficina con zonas iluminadas por presencia"><defs><radialGradient id="lg-oficina"><stop offset="0" style="stop-color:var(--acc);stop-opacity:.85"/><stop offset=".45" style="stop-color:var(--acc2);stop-opacity:.22"/><stop offset="1" style="stop-color:var(--acc2);stop-opacity:0"/></radialGradient></defs><rect class="st" x="40" y="120" width="60" height="34" rx="4"/><path class="st" d="M55 154v16M85 154v16"/><rect class="st" x="130" y="120" width="60" height="34" rx="4"/><path class="st" d="M145 154v16M175 154v16"/><rect class="st" x="220" y="120" width="60" height="34" rx="4"/><path class="st" d="M235 154v16M265 154v16"/><circle cx="70" cy="90" r="70" fill="url(#lg-oficina)"/><circle cx="250" cy="90" r="70" fill="url(#lg-oficina)"/><path class="st" d="M20 40h280" stroke-dasharray="4 6"/><rect x="60" y="40" width="20" height="4" rx="2" style="fill:var(--acc)" opacity="1"/><rect x="150" y="40" width="20" height="4" rx="2" style="fill:var(--acc)" opacity="0.25"/><rect x="240" y="40" width="20" height="4" rx="2" style="fill:var(--acc)" opacity="1"/></svg><h3><a href="soluciones/industrias/edificio-administrativo/">Oficinas</a></h3><p class="mut" style="margin:0">La luz sigue a las personas y a la luz del día. Despachos, salas y plantas diáfanas.</p></article><article class="card spot reveal w6"><svg class="art" viewBox="0 0 320 200" role="img" aria-label="Ilustración abstracta: hospital con zonas iluminadas por presencia"><defs><radialGradient id="lg-hospital"><stop offset="0" style="stop-color:var(--acc);stop-opacity:.85"/><stop offset=".45" style="stop-color:var(--acc2);stop-opacity:.22"/><stop offset="1" style="stop-color:var(--acc2);stop-opacity:0"/></radialGradient></defs><path class="st" d="M20 180 120 100h80l100 80M120 100V30M200 100V30M20 30h280"/><circle cx="160" cy="112" r="46" fill="url(#lg-hospital)"/><circle cx="110" cy="150" r="34" fill="url(#lg-hospital)"/><circle cx="70" cy="175" r="26" fill="url(#lg-hospital)"/><path d="M150 55h20M160 45v20" style="stroke:var(--acc);stroke-width:3;stroke-linecap:round"/></svg><h3><a href="soluciones/industrias/hospitales-y-centros-sanitarios/">Hospitales</a></h3><p class="mut" style="margin:0">Pasillos que se anticipan al paso, aseos sin contacto, control automático permanente.</p></article><article class="card spot reveal w6"><svg class="art" viewBox="0 0 320 200" role="img" aria-label="Ilustración abstracta: logistica con zonas iluminadas por presencia"><defs><radialGradient id="lg-logistica"><stop offset="0" style="stop-color:var(--acc);stop-opacity:.85"/><stop offset=".45" style="stop-color:var(--acc2);stop-opacity:.22"/><stop offset="1" style="stop-color:var(--acc2);stop-opacity:0"/></radialGradient></defs><rect class="st" x="30" y="60" width="40" height="120"/><path class="st" d="M30 100h40M30 140h40"/><rect class="st" x="100" y="60" width="40" height="120"/><path class="st" d="M100 100h40M100 140h40"/><rect class="st" x="170" y="60" width="40" height="120"/><path class="st" d="M170 100h40M170 140h40"/><rect class="st" x="240" y="60" width="40" height="120"/><path class="st" d="M240 100h40M240 140h40"/><circle cx="85" cy="40" r="60" fill="url(#lg-logistica)"/><circle cx="155" cy="40" r="60" fill="url(#lg-logistica)"/><path class="st" d="M10 20h300"/><rect x="78" y="18" width="14" height="5" rx="2" style="fill:var(--acc)" opacity="1"/><rect x="148" y="18" width="14" height="5" rx="2" style="fill:var(--acc)" opacity="1"/><rect x="218" y="18" width="14" height="5" rx="2" style="fill:var(--acc)" opacity="0.25"/></svg><h3><a href="soluciones/industrias/industria-y-logistica/">Industria y logística</a></h3><p class="mut" style="margin:0">Detección fiable en naves y almacenes con alturas de hasta 20 m.</p></article><article class="card spot reveal w6"><svg class="art" viewBox="0 0 320 200" role="img" aria-label="Ilustración abstracta: hotel con zonas iluminadas por presencia"><defs><radialGradient id="lg-hotel"><stop offset="0" style="stop-color:var(--acc);stop-opacity:.85"/><stop offset=".45" style="stop-color:var(--acc2);stop-opacity:.22"/><stop offset="1" style="stop-color:var(--acc2);stop-opacity:0"/></radialGradient></defs><path class="st" d="M20 180 130 90h60l110 90M130 90V30M190 90V30"/><rect class="st" x="60" y="120" width="16" height="50" transform="skewY(-20)"/><rect class="st" x="100" y="108" width="16" height="40" transform="skewY(-20)"/><circle cx="160" cy="100" r="40" fill="url(#lg-hotel)"/><circle cx="120" cy="140" r="30" fill="url(#lg-hotel)"/><circle cx="245" cy="150" r="6" style="fill:var(--acc)"/></svg><h3><a href="soluciones/industrias/hoteles/">Hoteles</a></h3><p class="mut" style="margin:0">Seguridad en pasillos y aparcamientos, confort e higiene para huéspedes.</p></article></div></div></section>
+
+<section class="hair" id="respuestas"><div class="wrap">
+<div class="sec-hd"><h2>Respuestas rápidas</h2><p>Respuestas breves y citables sobre control de iluminación, con su fuente.</p></div>
+<div class="answers"><article class="card reveal"><h3>¿Qué es un detector de presencia?</h3><p>Un sensor, normalmente PIR (infrarrojo pasivo), que detecta personas, incluidos movimientos pequeños como los de alguien sentado, y mide la luz natural para encender, apagar o regular la iluminación solo cuando hace falta.</p><p class="src">Fuente: <a href="guias/como-elegir-un-detector-de-presencia/">Guía B.E.G. Hispania</a></p></article><article class="card reveal"><h3>¿Cuánta energía se ahorra con detectores de presencia?</h3><p>Según B.E.G., hasta un 50 % en oficinas, hasta un 60 % en almacenes de gran altura y hasta un 80 % en aseos. Son máximos del fabricante; el ahorro real depende de la ocupación y la luz natural.</p><p class="src">Fuente: <a href="https://www.beg-luxomat.com/es/empresa/quienes-somos/ahorrando-energia/">B.E.G., «Ahorrando energía»</a></p></article><article class="card reveal"><h3>¿DALI-2, KNX o 230 V?</h3><p>230 V para estancias individuales sin bus; DALI-2 para regular luminarias DALI, con o sin controlador externo; KNX cuando el edificio integra iluminación, clima y persianas en un bus KNX.</p><p class="src">Fuente: <a href="guias/como-elegir-un-detector-de-presencia/">Guía B.E.G. Hispania</a></p></article><article class="card reveal"><h3>¿Qué alcance tiene el detector de techo PD4N?</h3><p>Máx. Ø 24 m en movimiento transversal, Ø 8 m frontal y Ø 6,4 m en actividad sedentaria; 450 m² a 2,5 m de altura de montaje (rango de montaje 2–10 m).</p><p class="src">Fuente: <a href="https://www.beg-luxomat.com/es/productos/detalles/PD4N-BMS-DALI-2-93546/">Ficha oficial PD4N-BMS DALI-2</a></p></article><article class="card reveal"><h3>¿Dónde se compran los productos B.E.G.?</h3><p>Exclusivamente a través de distribuidores de material eléctrico. Si no los encuentra en su distribuidor habitual, B.E.G. Hispania le orienta.</p><p class="src">Fuente: <a href="https://www.beg-luxomat.com/es/">beg-luxomat.com</a></p></article><article class="card reveal"><h3>¿B.E.G. ayuda a diseñar el proyecto?</h3><p>Sí: envíe el plano CAD y recibirá sin cargo una propuesta con los productos más adecuados. Los integradores de B.E.G. ponen en marcha in situ sistemas DALI complejos.</p><p class="src">Fuente: <a href="https://www.beg-luxomat.com/es/">beg-luxomat.com</a></p></article></div></div></section>
+
+<section class="hair"><div class="wrap">
+<div class="sec-hd"><h2>Para quien proyecta, integra e instala.</h2></div>
+<div class="bento">
+<div class="card reveal w3"><h3>Ingenierías y proyectistas</h3><p class="mut">Plano CAD → propuesta sin cargo. Datos BIM y texto de prescripción en cada ficha.</p></div>
+<div class="card reveal w3"><h3>Integradores</h3><p class="mut">Puesta en marcha in situ de sistemas de control de iluminación DALI complejos.</p></div>
+<div class="card reveal w3"><h3>Instaladores</h3><p class="mut">Consultoría, formación y software para instalar y configurar rápido.</p></div>
+<div class="card reveal w3"><h3>Distribuidores</h3><p class="mut">Los productos B.E.G. se venden exclusivamente a través de distribuidores de material eléctrico.</p></div>
+</div>
+<p class="src">Formación y certificaciones del equipo técnico en España: <mark class="tbc">[dato a confirmar por el cliente]</mark></p>
+<div class="cta-band reveal" style="margin-top:40px"><div><p class="eyebrow">Soporte de proyecto</p><h2>Envíe su plano CAD. Le proponemos los detectores adecuados, sin cargo.</h2></div>
+<div class="ctas" style="justify-content:flex-end"><a class="btn pri" href="contacto/#proyecto">Iniciar proyecto <span class="ar" aria-hidden="true">→</span></a><a class="btn ghost" href="herramientas/calculadora-de-ahorro-energetico/">Calcular ahorro</a></div></div>
+</div></section>
 </main>
-<footer class="site"><div class="wrap fgrid">
-<div><strong>B.E.G. Hispania S.L.U.</strong><br>Filial en España de B.E.G. Brück Electronic GmbH<br>
-<a href="contacto/">Contacto y oficinas</a> · <a href="empresa/conoce-beg/">Sobre B.E.G.</a></div>
-<div><strong>Central</strong><br>Avinguda de Cornellà, 140<br>08950 Esplugues de Llobregat (Barcelona)<br>
-<a href="tel:+34930181609">+34 93 018 16 09</a> · <a href="mailto:info@beg-luxomat.es">info@beg-luxomat.es</a></div>
-<div><strong>Delegación Madrid</strong><br>Calle Aguacate, 41, Bloque A-2, 2ª planta, oficina 8<br>28054 Madrid</div>
-<div><strong>Síguenos</strong><br><a href="https://www.linkedin.com/company/beghispania/" rel="noopener">LinkedIn</a> · <a href="https://www.facebook.com/BEGHispania.es" rel="noopener">Facebook</a> · <a href="https://www.youtube.com/channel/UCuiP9Q4WF5_9bv6rZM32Kdw" rel="noopener">YouTube</a>
-<br><span class="src">Prototipo generado el 26-oct-2026. Textos y datos técnicos: beg-luxomat.com.</span></div>
+<footer class="site"><div class="wrap">
+<p class="f-big">Luz solo donde <span>hay alguien.</span></p>
+<div class="fgrid">
+<div><strong>B.E.G. Hispania S.L.U.</strong>Filial en España de B.E.G. Brück Electronic GmbH (Lindlar, Alemania).<br>
+<a href="empresa/conoce-beg/">Empresa</a> · <a href="contacto/">Contacto</a> · <a href="guias/">Guías</a></div>
+<div><strong>Central · Barcelona</strong>Avinguda de Cornellà, 140<br>08950 Esplugues de Llobregat (Barcelona)<br>
+<a href="tel:+34930181609">+34 93 018 16 09</a><br><a href="mailto:info@beg-luxomat.es">info@beg-luxomat.es</a></div>
+<div><strong>Delegación · Madrid</strong>Calle Aguacate, 41, Bloque A-2, 2ª planta, oficina 8<br>28054 Madrid</div>
+<div><strong>Síguenos</strong><a href="https://www.linkedin.com/company/beghispania/" rel="noopener">LinkedIn</a><br><a href="https://www.facebook.com/BEGHispania.es" rel="noopener">Facebook</a><br><a href="https://www.youtube.com/channel/UCuiP9Q4WF5_9bv6rZM32Kdw" rel="noopener">YouTube</a></div>
+</div>
+<div class="f-bot mono"><span>Prototipo v2 · 26-oct-2026 · Textos y datos técnicos: beg-luxomat.com</span><span>Tipografía Geist (SIL OFL) · Ilustraciones y simulaciones propias</span></div>
 </div></footer>
-
 </body>
 </html>

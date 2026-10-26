@@ -1,11 +1,32 @@
-# Prototipo SEO/GEO – B.E.G. Luxomat España (propuesta)
+# Prototipo SEO/GEO – B.E.G. Luxomat España (propuesta) · v2
+
+**Versión 2 (rediseño 2026).** La versión anterior se conserva en la rama [`v1`](../../tree/v1).
+
+v2 es un rediseño completo: tema oscuro por defecto con modo claro, tipografía Geist autoalojada,
+cuadrículas bento, plano interactivo de presencia y luz natural en la home, configurador sobre los 3 detectores PD4N,
+fichas de producto con diagrama de cobertura a escala, comparador y descargas, sectores, guía, calculadora transparente.
+Solo imágenes reales de producto de beg-luxomat.com y SVG propios. Se mantienen la franja de prototipo, `noindex`
+y el `robots.txt` de despliegue en todas las páginas.
+
+Se genera con `scripts/v2/build_v2.py`:
+
+```
+python3 scripts/v2/build_v2.py --base https://www.beg-luxomat.com          # -> prototype_v2/
+python3 scripts/v2/build_v2.py --out deploy --base https://migure89.github.io/beg-luxomat-prototipo
+python3 scripts/qa_v2.py                                                   # QA -> prototype_qa/v2/
+```
+
+---
+
+## Notas de la v1 (siguen aplicando)
+
 
 Prototipo estático de la web `/es/` de B.E.G. con las mejoras de la auditoría (26-oct-2026) aplicadas.
 **No es la web oficial de B.E.G.** Lo ha generado el consultor como propuesta. Textos y datos técnicos
 reutilizados de beg-luxomat.com. Donde falta un dato, aparece el marcador visible
 `[dato a confirmar por el cliente]`.
 
-Se genera con `scripts/build_proto.py` (los datos vienen de `scripts/proto_data.py` y de `raw/proto/`).
+En v1 se generaba con `scripts/build_proto.py` (los datos vienen de `scripts/proto_data.py` y de `raw/proto/`).
 
 ```
 python3 scripts/build_proto.py                       # prototipo (noindex + franja + robots Disallow)

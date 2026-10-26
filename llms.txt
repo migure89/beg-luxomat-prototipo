@@ -6,6 +6,7 @@ Contacto: B.E.G. Hispania S.L.U., Avinguda de Cornellà, 140, 08950 Esplugues de
 
 ## Productos
 - [Detectores de presencia para techo](https://migure89.github.io/beg-luxomat-prototipo/es/productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/): 230 V, DALI-2 y KNX, alcances de 9 a 40 m
+- [Encuentra tu detector (configurador)](https://migure89.github.io/beg-luxomat-prototipo/es/productos/encuentra-tu-detector/): filtra los PD4N por sistema, montaje, altura y aplicación
 - [PD4N-BMS DALI-2 (ref. 93546)](https://migure89.github.io/beg-luxomat-prototipo/es/productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/pd4n-bms-dali-2-93546/): Detector de presencia DALI-2 (input device, multimaster IEC 62386-103)
 - [PD4N-M-DACO DALI-2 (ref. 93460)](https://migure89.github.io/beg-luxomat-prototipo/es/productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/pd4n-m-daco-dali-2-93460/): Detector de presencia con controlador de aplicación DALI-2 integrado (master único)
 - [PD4N-KNXs-ST-FT (ref. 93514)](https://migure89.github.io/beg-luxomat-prototipo/es/productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/pd4n-knxs-st-ft-93514/): Detector de presencia KNX con acoplador de bus integrado
@@ -27,3 +28,4 @@ Contacto: B.E.G. Hispania S.L.U., Avinguda de Cornellà, 140, 08950 Esplugues de
 ## Datos citables
 - Ahorro máximo citado por B.E.G.: hasta 50 % en oficinas, 60 % en almacenes de gran altura, 80 % en aseos (fuente: https://www.beg-luxomat.com/es/empresa/quienes-somos/ahorrando-energia/).
 - Empresa familiar fundada en 1975, 14 filiales, más de 260 empleados, ISO 9001 e ISO 14001 (fuente: https://www.beg-luxomat.com/es/empresa/conoce-beg/).
+- PD4N (refs. 93546, 93460, 93514): alcance máx. Ø 24 m transversal, Ø 8 m frontal, Ø 6,4 m sedentaria; 450 m² a 2,5 m; montaje 2–10 m (fuente: fichas oficiales de beg-luxomat.com).
