@@ -1,0 +1,223 @@
+<!doctype html>
+<html lang="es-ES">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Detectores de presencia y control de iluminación | B.E.G.</title>
+<meta name="description" content="Detectores de presencia y movimiento, DALI-2 y KNX para oficinas, hospitales, logística y hoteles. Fabricante alemán desde 1975. Asesoramiento en España.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="canonical" href="https://migure89.github.io/beg-luxomat-prototipo/es/">
+<link rel="alternate" hreflang="es-ES" href="https://migure89.github.io/beg-luxomat-prototipo/es/">
+<link rel="alternate" hreflang="en" href="https://www.beg-luxomat.com/en/">
+<link rel="alternate" hreflang="de" href="https://www.beg-luxomat.com/de/">
+<link rel="alternate" hreflang="fr" href="https://www.beg-luxomat.com/fr/">
+<link rel="alternate" hreflang="x-default" href="https://www.beg-luxomat.com/en/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:site_name" content="B.E.G. Hispania">
+<meta property="og:title" content="Detectores de presencia y control de iluminación | B.E.G.">
+<meta property="og:description" content="Detectores de presencia y movimiento, DALI-2 y KNX para oficinas, hospitales, logística y hoteles. Fabricante alemán desde 1975. Asesoramiento en España.">
+<meta property="og:url" content="https://migure89.github.io/beg-luxomat-prototipo/es/">
+<meta property="og:image" content="https://migure89.github.io/beg-luxomat-prototipo/assets/img/og-beg-hispania.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="../assets/img/beg-logo.svg" type="image/svg+xml">
+<style>
+:root{--red:#d00;--ink:#1d1d1f;--mut:#555;--bg:#f5f5f7;--line:#ddd;--max:1120px}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:#fff}
+a{color:#b00000}a:hover{color:var(--ink)}img{max-width:100%;height:auto}
+.proto{background:#fff6d6;color:#5a4500;font-size:13px;text-align:center;padding:4px 12px;border-bottom:1px solid #eed98a}
+.wrap{max-width:var(--max);margin:0 auto;padding:0 20px}
+header.site{border-bottom:1px solid var(--line)}
+.hd{display:flex;align-items:center;gap:20px;min-height:64px;flex-wrap:wrap}
+.logo{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--ink);font-weight:700}
+nav.main ul{list-style:none;display:flex;flex-wrap:wrap;gap:4px 18px;margin:0;padding:0}
+nav.main a{text-decoration:none;color:var(--ink);font-size:15px;padding:8px 0;display:inline-block}
+nav.main a:hover{color:var(--red)}
+.crumbs{font-size:14px;color:var(--mut);margin:16px 0 0}.crumbs ol{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap}
+.crumbs li+li:before{content:"\203A";margin:0 8px;color:#999}.crumbs a{color:var(--mut)}
+h1{font-size:clamp(1.6rem,3.5vw,2.3rem);line-height:1.2;margin:.6em 0 .4em}
+h2{font-size:1.45rem;line-height:1.25;margin:1.8em 0 .6em}h3{font-size:1.1rem;margin:1.2em 0 .4em}
+.lead{font-size:1.12rem;color:#333;max-width:70ch}
+.hero{display:grid;grid-template-columns:1.3fr 1fr;gap:32px;align-items:center;padding:16px 0 8px}
+.hero img{justify-self:center;aspect-ratio:1/1}
+.btn{display:inline-block;background:var(--red);color:#fff;text-decoration:none;padding:12px 20px;border-radius:4px;font-weight:600;margin:6px 8px 6px 0}
+.btn.sec{background:#fff;color:var(--ink);border:1px solid var(--ink)}.btn:hover{color:#fff;background:#a00}.btn.sec:hover{background:var(--bg);color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:16px;margin:12px 0}
+.card{border:1px solid var(--line);border-radius:6px;padding:16px;background:#fff}
+.card h3{margin-top:.2em}.card img{display:block;margin:0 auto 8px;aspect-ratio:1/1}
+.card .meta{color:var(--mut);font-size:14px}
+table{border-collapse:collapse;width:100%;margin:8px 0 16px;font-size:15px}
+th,td{border-bottom:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+th{width:40%;background:var(--bg);font-weight:600}thead th{background:#eee;width:auto}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:4px 16px;margin:12px 0}.facts dt{font-weight:600}.facts dd{margin:0}
+.box{background:var(--bg);border-radius:6px;padding:16px 20px;margin:16px 0}
+.tldr{border-left:4px solid var(--red);background:var(--bg);padding:12px 18px;margin:16px 0}
+details{border-bottom:1px solid var(--line);padding:10px 0}summary{cursor:pointer;font-weight:600}
+mark.tbc{background:#ffe9a8;color:#5a4500;padding:0 3px;border-radius:2px;font-size:.92em}
+.src{font-size:13px;color:var(--mut)}
+footer.site{margin-top:48px;background:var(--ink);color:#ddd;font-size:14px;padding:28px 0}
+footer.site a{color:#fff}.fgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:20px}
+footer.site .src{color:#bbb}
+form.calc{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px 20px}
+form.calc label{display:flex;flex-direction:column;font-weight:600;font-size:15px}
+form.calc input,form.calc select{font:inherit;padding:8px;border:1px solid #767676;border-radius:4px;margin-top:4px}
+form.calc small{font-weight:400;color:var(--mut)}
+.result{font-size:1.1rem}.result strong{font-size:1.4rem}
+@media (max-width:760px){.hero{grid-template-columns:1fr}.hero img{width:240px;height:240px}th{width:45%}}
+</style>
+<script type="application/ld+json">{
+ "@context": "https://schema.org",
+ "@graph": [
+  {
+   "@type": "Organization",
+   "@id": "https://www.beg-luxomat.com/#organization",
+   "name": "B.E.G. Brück Electronic GmbH",
+   "alternateName": [
+    "B.E.G.",
+    "B.E.G. Luxomat"
+   ],
+   "url": "https://www.beg-luxomat.com/",
+   "logo": "https://migure89.github.io/beg-luxomat-prototipo/assets/img/beg-logo.svg",
+   "foundingDate": "1975",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Gerberstraße 33",
+    "postalCode": "51789",
+    "addressLocality": "Lindlar",
+    "addressRegion": "Nordrhein-Westfalen",
+    "addressCountry": "DE"
+   },
+   "telephone": "+492266901210",
+   "email": "vertrieb@beg.de",
+   "vatID": "DE123239476",
+   "numberOfEmployees": {
+    "@type": "QuantitativeValue",
+    "minValue": 260
+   },
+   "subOrganization": {
+    "@id": "https://www.beg-luxomat.com/es/#beg-hispania"
+   }
+  },
+  {
+   "@type": [
+    "Organization",
+    "LocalBusiness"
+   ],
+   "@id": "https://www.beg-luxomat.com/es/#beg-hispania",
+   "name": "B.E.G. Hispania S.L.U.",
+   "url": "https://migure89.github.io/beg-luxomat-prototipo/es/",
+   "parentOrganization": {
+    "@id": "https://www.beg-luxomat.com/#organization"
+   },
+   "telephone": "+34930181609",
+   "email": "info@beg-luxomat.es",
+   "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Avinguda de Cornellà, 140",
+    "postalCode": "08950",
+    "addressLocality": "Esplugues de Llobregat",
+    "addressRegion": "Barcelona",
+    "addressCountry": "ES"
+   },
+   "areaServed": {
+    "@type": "Country",
+    "name": "España"
+   },
+   "sameAs": [
+    "https://www.linkedin.com/company/beghispania/",
+    "https://www.facebook.com/BEGHispania.es",
+    "https://www.youtube.com/channel/UCuiP9Q4WF5_9bv6rZM32Kdw"
+   ],
+   "image": "https://migure89.github.io/beg-luxomat-prototipo/assets/img/og-beg-hispania.jpg",
+   "logo": "https://migure89.github.io/beg-luxomat-prototipo/assets/img/beg-logo.svg"
+  },
+  {
+   "@type": "WebSite",
+   "@id": "https://www.beg-luxomat.com/es/#website",
+   "url": "https://migure89.github.io/beg-luxomat-prototipo/es/",
+   "name": "B.E.G. Hispania",
+   "alternateName": "B.E.G. Luxomat España",
+   "inLanguage": "es-ES",
+   "publisher": {
+    "@id": "https://www.beg-luxomat.com/es/#beg-hispania"
+   }
+  },
+  {
+   "@type": "WebPage",
+   "@id": "https://migure89.github.io/beg-luxomat-prototipo/es/#webpage",
+   "url": "https://migure89.github.io/beg-luxomat-prototipo/es/",
+   "name": "Detectores de presencia y control de iluminación | B.E.G.",
+   "isPartOf": {
+    "@id": "https://www.beg-luxomat.com/es/#website"
+   },
+   "about": {
+    "@id": "https://www.beg-luxomat.com/#organization"
+   },
+   "inLanguage": "es-ES",
+   "primaryImageOfPage": {
+    "@type": "ImageObject",
+    "url": "https://migure89.github.io/beg-luxomat-prototipo/assets/img/93546-detector-presencia-beg-400.webp"
+   }
+  }
+ ]
+}</script>
+</head>
+<body>
+<div class="proto" role="note">Prototipo de propuesta SEO/GEO – no es la web oficial de B.E.G.</div>
+<header class="site"><div class="wrap hd">
+<a class="logo" href="./"><img src="../assets/img/beg-logo.svg" width="40" height="40" alt="Logotipo de B.E.G."><span>B.E.G. Hispania</span></a>
+<nav class="main" aria-label="Principal"><ul><li><a href="productos/">Productos</a></li><li><a href="soluciones/industrias/">Sectores</a></li><li><a href="guias/como-elegir-un-detector-de-presencia/">Guía</a></li><li><a href="herramientas/calculadora-de-ahorro-energetico/">Calculadora de ahorro</a></li><li><a href="empresa/conoce-beg/">Sobre B.E.G.</a></li><li><a href="contacto/">Contacto</a></li></ul></nav>
+</div></header>
+<main class="wrap">
+
+
+<section class="hero">
+<div>
+<h1>Detectores de presencia y control de iluminación para edificios profesionales</h1>
+<p class="lead">B.E.G. desarrolla y fabrica en Alemania desde 1975 detectores de movimiento y presencia, sensores y actuadores para controlar automáticamente la iluminación y la climatización en oficinas, hospitales, centros logísticos, hoteles y escuelas. En España, B.E.G. Hispania asesora a ingenierías, integradores, instaladores y arquitectos.</p>
+<a class="btn" href="productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/">Ver detectores de presencia de techo</a><a class="btn sec" href="contacto/">Solicitar asesoramiento de proyecto</a>
+</div>
+<img src="../assets/img/93546-detector-presencia-beg-400.webp" srcset="../assets/img/93546-detector-presencia-beg-200.webp 200w, ../assets/img/93546-detector-presencia-beg-400.webp 400w" sizes="(max-width: 600px) 90vw, 400px" width="400" height="400" alt="Detector de presencia de techo B.E.G. PD4N-BMS DALI-2" fetchpriority="high" decoding="async" class="">
+</section>
+<div class="tldr"><strong>En resumen:</strong> sensores y sistemas de control de iluminación para soluciones on/off, KNX, BMS DALI-2, DALI-LINK, DALI-SYS y Casambi. Venta exclusiva a través de distribuidores de material eléctrico. Propuesta técnica sin cargo a partir de su plano CAD.</div>
+<h2>Gama de productos</h2>
+<div class="grid">
+<div class="card"><h3><a href="productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/">Detectores de presencia de techo</a></h3><p class="meta">Control de la iluminación según presencia y luz natural, en versiones 230 V, DALI-2 y KNX.</p></div>
+<div class="card"><h3><a href="https://www.beg-luxomat.com/es/productos/detectores-de-movimiento-y-presencia/">Detectores de movimiento y presencia</a></h3><p class="meta">Control de iluminación profesional mediante sensores sencillos.</p></div>
+<div class="card"><h3><a href="https://www.beg-luxomat.com/es/productos/sistemas-de-control/">Sistemas de control</a></h3><p class="meta">Sistemas en red para el control integral de edificios: KNX, BMS DALI-2, DALI-LINK, DALI-SYS, Casambi.</p></div>
+<div class="card"><h3><a href="https://www.beg-luxomat.com/es/productos/luminarias-y-emergencias/">Luminarias y emergencias</a></h3><p class="meta">Tecnología LED con y sin detección de movimiento.</p></div>
+<div class="card"><h3><a href="https://www.beg-luxomat.com/es/productos/programadores-horarios/">Programadores horarios</a></h3><p class="meta">Confort y seguridad mediante iluminación temporizada.</p></div>
+</div>
+<h2>Soluciones por sector</h2>
+<div class="grid">
+<div class="card"><h3><a href="soluciones/industrias/edificio-administrativo/">Oficinas y edificios administrativos</a></h3><p class="meta">Regulación por luz natural y presencia; según B.E.G., hasta un 50 % de ahorro en oficinas.</p></div>
+<div class="card"><h3><a href="soluciones/industrias/hospitales-y-centros-sanitarios/">Hospitales y centros sanitarios</a></h3><p class="meta">Pasillos con luz de orientación, aseos sin contacto y control automático 24 h.</p></div>
+<div class="card"><h3><a href="soluciones/industrias/industria-y-logistica/">Industria y logística</a></h3><p class="meta">Detección fiable en naves y almacenes con alturas de hasta 20 m.</p></div>
+<div class="card"><h3><a href="soluciones/industrias/hoteles/">Hoteles</a></h3><p class="meta">Seguridad en pasillos y aparcamientos, confort para huéspedes e higiene en aseos.</p></div>
+</div>
+<h2>¿Cuánta energía se puede ahorrar con detectores de presencia?</h2>
+<p>Según B.E.G., la automatización controlada por presencia puede ahorrar <strong>hasta un 50 %</strong> del consumo en edificios de oficinas, <strong>hasta un 60 %</strong> en almacenes de gran altura y <strong>hasta un 80 %</strong> en aseos (<a href="https://www.beg-luxomat.com/es/empresa/quienes-somos/ahorrando-energia/">fuente: B.E.G., «Ahorrando energía»</a>). Son valores máximos citados por el fabricante, no garantizados: el ahorro real depende de la ocupación, la luz natural y la instalación previa.</p>
+<p><a class="btn sec" href="herramientas/calculadora-de-ahorro-energetico/">Calcular el ahorro de su instalación</a> <a class="btn sec" href="guias/como-elegir-un-detector-de-presencia/">Guía: cómo elegir un detector de presencia</a></p>
+<h2>Servicio para profesionales</h2>
+<ul>
+<li><strong>Ingenierías y proyectistas:</strong> envíe el plano CAD y recibirá sin cargo una propuesta con los productos más adecuados. Datos BIM y textos de prescripción en cada ficha.</li>
+<li><strong>Integradores de sistemas:</strong> puesta en marcha in situ de sistemas de control de iluminación DALI complejos.</li>
+<li><strong>Instaladores:</strong> consultoría, formación y software para una instalación y configuración rápidas.</li>
+<li><strong>Distribuidores:</strong> los productos B.E.G. se venden exclusivamente a través de distribuidores de material eléctrico.</li>
+</ul>
+<p>Formación y certificaciones del equipo técnico en España: <mark class="tbc">[dato a confirmar por el cliente]</mark></p>
+
+</main>
+<footer class="site"><div class="wrap fgrid">
+<div><strong>B.E.G. Hispania S.L.U.</strong><br>Filial en España de B.E.G. Brück Electronic GmbH<br>
+<a href="contacto/">Contacto y oficinas</a> · <a href="empresa/conoce-beg/">Sobre B.E.G.</a></div>
+<div><strong>Central</strong><br>Avinguda de Cornellà, 140<br>08950 Esplugues de Llobregat (Barcelona)<br>
+<a href="tel:+34930181609">+34 93 018 16 09</a> · <a href="mailto:info@beg-luxomat.es">info@beg-luxomat.es</a></div>
+<div><strong>Delegación Madrid</strong><br>Calle Aguacate, 41, Bloque A-2, 2ª planta, oficina 8<br>28054 Madrid</div>
+<div><strong>Síguenos</strong><br><a href="https://www.linkedin.com/company/beghispania/" rel="noopener">LinkedIn</a> · <a href="https://www.facebook.com/BEGHispania.es" rel="noopener">Facebook</a> · <a href="https://www.youtube.com/channel/UCuiP9Q4WF5_9bv6rZM32Kdw" rel="noopener">YouTube</a>
+<br><span class="src">Prototipo generado el 26-oct-2026. Textos y datos técnicos: beg-luxomat.com.</span></div>
+</div></footer>
+
+</body>
+</html>

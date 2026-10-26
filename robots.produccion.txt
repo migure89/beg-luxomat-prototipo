@@ -1,0 +1,20 @@
+# robots.txt PROPUESTO para producción (M11) – no usar en el prototipo
+User-agent: *
+Disallow: /es/productos/detalles/$
+
+# Buscadores y asistentes de IA: permitidos explícitamente (GEO)
+User-agent: OAI-SearchBot
+User-agent: ChatGPT-User
+User-agent: GPTBot
+User-agent: PerplexityBot
+User-agent: Perplexity-User
+User-agent: Claude-SearchBot
+User-agent: Claude-User
+User-agent: ClaudeBot
+User-agent: Google-Extended
+User-agent: Applebot-Extended
+User-agent: CCBot
+Allow: /
+Disallow: /es/productos/detalles/$
+
+Sitemap: https://www.beg-luxomat.com/sitemap.xml
