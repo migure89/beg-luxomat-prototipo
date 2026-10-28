@@ -1,20 +1,26 @@
-# Prototipo SEO/GEO – B.E.G. Luxomat España (propuesta) · v2
+# Prototipo SEO/GEO – B.E.G. Luxomat España (propuesta) · v3
 
-**Versión 2 (rediseño 2026).** La versión anterior se conserva en la rama [`v1`](../../tree/v1).
+**Versión 3: web corporativa B2B.** La v2 se conserva en la rama [`v2`](../../tree/v2) y la v1 en la rama [`v1`](../../tree/v1).
+**No es la web oficial de B.E.G.** Todas las páginas llevan la franja de prototipo y `noindex`, y el `robots.txt` de despliegue bloquea todo.
 
-v2 es un rediseño completo: tema oscuro por defecto con modo claro, tipografía Geist autoalojada,
-cuadrículas bento, plano interactivo de presencia y luz natural en la home, configurador sobre los 3 detectores PD4N,
-fichas de producto con diagrama de cobertura a escala, comparador y descargas, sectores, guía, calculadora transparente.
-Solo imágenes reales de producto de beg-luxomat.com y SVG propios. Se mantienen la franja de prototipo, `noindex`
-y el `robots.txt` de despliegue en todas las páginas.
+v3 replantea la web como sitio de un fabricante B2B: fondo claro, rojo B.E.G. solo en los acentos, fotografía,
+diagramas, iconos y cifras grandes. **Los productos no se venden en línea**: el catálogo es técnico y sus únicas
+llamadas a la acción son «Solicitar asesoramiento» y «Encontrar distribuidor». No hay ni carrito ni precios.
+Las conversiones son: asesoramiento, estudio de ahorro, descarga de guía, contacto con la delegación y búsqueda de distribuidor.
+Los formularios no tienen backend.
 
-Se genera con `scripts/v2/build_v2.py`:
+Arquitectura: Soluciones (por necesidad), Sectores (oficinas, hospitales, industria y logística, hoteles),
+**Flex living y hospitality** (landing, apartamentos, espacios comunes, hoteles y productos por espacio; fuente: *Guía B.E.G. Flex Living*),
+Productos (catálogo, categoría, configurador y 3 fichas), Proyectos (8 casos de la guía), Recursos (guía Flex Living, BIM, fichas y certificados),
+guía técnica, calculadora, Profesionales, Empresa y Contacto.
 
 ```
-python3 scripts/v2/build_v2.py --base https://www.beg-luxomat.com          # -> prototype_v2/
-python3 scripts/v2/build_v2.py --out deploy --base https://migure89.github.io/beg-luxomat-prototipo
-python3 scripts/qa_v2.py                                                   # QA -> prototype_qa/v2/
+python3 scripts/v3/build_v3.py --base https://migure89.github.io/beg-luxomat-prototipo   # -> prototype_v3/
+python3 scripts/qa_v3.py                                                                 # JSON-LD, enlaces/anclas, noindex, franja
 ```
+
+Las imágenes de proyectos y espacios proceden de la Guía B.E.G. Flex Living, y las de producto y sector de beg-luxomat.com.
+Son propiedad del cliente.
 
 ---
 

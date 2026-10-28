@@ -1,31 +1,54 @@
 # B.E.G. Hispania (B.E.G. Luxomat España)
 
-> Filial en España de B.E.G. Brück Electronic GmbH (Lindlar, Alemania; fundada en 1975): detectores de presencia y movimiento, sistemas de control de iluminación (230 V, DALI-2, KNX, DALI-LINK, DALI-SYS, Casambi), luminarias y emergencias. Venta exclusiva a través de distribuidores de material eléctrico.
+> Filial en España de B.E.G. Brück Electronic GmbH (Lindlar, Alemania; fundada en 1975): detectores de presencia y movimiento, sistemas de control de iluminación (230 V, DALI-2, KNX, DALI-LINK, DALI-SYS, Casambi), luminarias y emergencias. Empresa B2B: los productos no se venden en línea, sino exclusivamente a través de distribuidores de material eléctrico.
 
 Contacto: B.E.G. Hispania S.L.U., Avinguda de Cornellà, 140, 08950 Esplugues de Llobregat (Barcelona), España. Tel. +34 93 018 16 09. info@beg-luxomat.es. Delegación: Calle Aguacate, 41, Bloque A-2, 2ª planta, oficina 8, 28054 Madrid.
 
-## Productos
-- [Detectores de presencia para techo](https://migure89.github.io/beg-luxomat-prototipo/es/productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/): 230 V, DALI-2 y KNX, alcances de 9 a 40 m
-- [Encuentra tu detector (configurador)](https://migure89.github.io/beg-luxomat-prototipo/es/productos/encuentra-tu-detector/): filtra los PD4N por sistema, montaje, altura y aplicación
+## Soluciones
+- [Soluciones](https://migure89.github.io/beg-luxomat-prototipo/es/soluciones/)
+- [Sectores](https://migure89.github.io/beg-luxomat-prototipo/es/soluciones/industrias/)
+- [Oficinas](https://migure89.github.io/beg-luxomat-prototipo/es/soluciones/industrias/edificio-administrativo/)
+- [Hospitales y centros sanitarios](https://migure89.github.io/beg-luxomat-prototipo/es/soluciones/industrias/hospitales-y-centros-sanitarios/)
+- [Industria y logística](https://migure89.github.io/beg-luxomat-prototipo/es/soluciones/industrias/industria-y-logistica/)
+- [Hoteles](https://migure89.github.io/beg-luxomat-prototipo/es/soluciones/industrias/hoteles/)
+
+## Flex living y hospitality (fuente: Guía B.E.G. Flex Living)
+- [Flex living y hospitality](https://migure89.github.io/beg-luxomat-prototipo/es/soluciones/flex-living-hospitality/): control de iluminación y automatización para residencias de estudiantes, coliving, coworking y hoteles
+- [Apartamentos](https://migure89.github.io/beg-luxomat-prototipo/es/soluciones/flex-living-hospitality/apartamentos/)
+- [Espacios comunes](https://migure89.github.io/beg-luxomat-prototipo/es/soluciones/flex-living-hospitality/espacios-comunes/)
+- [Hoteles: 3 niveles de automatización](https://migure89.github.io/beg-luxomat-prototipo/es/soluciones/flex-living-hospitality/hoteles/)
+- [Productos por espacio](https://migure89.github.io/beg-luxomat-prototipo/es/soluciones/flex-living-hospitality/soluciones-por-espacio/)
+
+## Proyectos de referencia
+- [Vita Student Pedralbes, Barcelona](https://migure89.github.io/beg-luxomat-prototipo/es/proyectos/vita-student-pedralbes/): Residencia de estudiantes, DALI-SYS
+- [Casa Les Punxes x Cloudworks, Barcelona](https://migure89.github.io/beg-luxomat-prototipo/es/proyectos/casa-les-punxes-cloudworks/): Coworking, DALI-SYS
+- [L’Illa & Co., Barcelona](https://migure89.github.io/beg-luxomat-prototipo/es/proyectos/lilla-and-co/): Coworking, DALI-SYS + detectores de presencia
+- [Hotel Giralda Center, Sevilla](https://migure89.github.io/beg-luxomat-prototipo/es/proyectos/hotel-giralda-center-sevilla/): Hotel, KNX
+- [Palacio Arriluce Hotel, Getxo (Bizkaia)](https://migure89.github.io/beg-luxomat-prototipo/es/proyectos/palacio-arriluce-hotel-getxo/): Hotel, DALI
+- [Hotel Golden Bahía de Tossa & Spa, Tossa de Mar (Girona)](https://migure89.github.io/beg-luxomat-prototipo/es/proyectos/hotel-golden-bahia-tossa-spa/): Hotel, DALI-SYS
+- [Club Med Magna Marbella, Marbella (Málaga)](https://migure89.github.io/beg-luxomat-prototipo/es/proyectos/club-med-magna-marbella/): Hotel / resort, KNX + DALI
+- [Hotel Mezquita, Córdoba](https://migure89.github.io/beg-luxomat-prototipo/es/proyectos/hotel-mezquita-cordoba/): Hotel, KNX + DALI integrado en el BMS
+
+## Productos (catálogo técnico, sin venta en línea)
+- [Catálogo técnico](https://migure89.github.io/beg-luxomat-prototipo/es/productos/)
+- [Detectores de presencia para techo](https://migure89.github.io/beg-luxomat-prototipo/es/productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/): 230 V, DALI-2 y KNX
+- [Encuentra tu detector](https://migure89.github.io/beg-luxomat-prototipo/es/productos/encuentra-tu-detector/): configurador de los PD4N
 - [PD4N-BMS DALI-2 (ref. 93546)](https://migure89.github.io/beg-luxomat-prototipo/es/productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/pd4n-bms-dali-2-93546/): Detector de presencia DALI-2 (input device, multimaster IEC 62386-103)
 - [PD4N-M-DACO DALI-2 (ref. 93460)](https://migure89.github.io/beg-luxomat-prototipo/es/productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/pd4n-m-daco-dali-2-93460/): Detector de presencia con controlador de aplicación DALI-2 integrado (master único)
 - [PD4N-KNXs-ST-FT (ref. 93514)](https://migure89.github.io/beg-luxomat-prototipo/es/productos/detectores-de-presencia-y-movimiento/detectores-de-presencia-para-techo/pd4n-knxs-st-ft-93514/): Detector de presencia KNX con acoplador de bus integrado
 
-## Sectores
-- [Oficinas](https://migure89.github.io/beg-luxomat-prototipo/es/soluciones/industrias/edificio-administrativo/)
-- [Hospitales](https://migure89.github.io/beg-luxomat-prototipo/es/soluciones/industrias/hospitales-y-centros-sanitarios/)
-- [Industria y logística](https://migure89.github.io/beg-luxomat-prototipo/es/soluciones/industrias/industria-y-logistica/)
-- [Hoteles](https://migure89.github.io/beg-luxomat-prototipo/es/soluciones/industrias/hoteles/)
-
-## Guías y herramientas
+## Recursos y herramientas
+- [Recursos: guía Flex Living, BIM, fichas, certificados](https://migure89.github.io/beg-luxomat-prototipo/es/recursos/)
 - [Cómo elegir un detector de presencia](https://migure89.github.io/beg-luxomat-prototipo/es/guias/como-elegir-un-detector-de-presencia/)
 - [Calculadora de ahorro energético](https://migure89.github.io/beg-luxomat-prototipo/es/herramientas/calculadora-de-ahorro-energetico/)
 
 ## Empresa
-- [Sobre B.E.G.](https://migure89.github.io/beg-luxomat-prototipo/es/empresa/conoce-beg/)
-- [Contacto](https://migure89.github.io/beg-luxomat-prototipo/es/contacto/)
+- [Conoce B.E.G.](https://migure89.github.io/beg-luxomat-prototipo/es/empresa/conoce-beg/)
+- [Profesionales](https://migure89.github.io/beg-luxomat-prototipo/es/profesionales/)
+- [Contacto y distribuidores](https://migure89.github.io/beg-luxomat-prototipo/es/contacto/)
 
 ## Datos citables
 - Ahorro máximo citado por B.E.G.: hasta 50 % en oficinas, 60 % en almacenes de gran altura, 80 % en aseos (fuente: https://www.beg-luxomat.com/es/empresa/quienes-somos/ahorrando-energia/).
 - Empresa familiar fundada en 1975, 14 filiales, más de 260 empleados, ISO 9001 e ISO 14001 (fuente: https://www.beg-luxomat.com/es/empresa/conoce-beg/).
 - PD4N (refs. 93546, 93460, 93514): alcance máx. Ø 24 m transversal, Ø 8 m frontal, Ø 6,4 m sedentaria; 450 m² a 2,5 m; montaje 2–10 m (fuente: fichas oficiales de beg-luxomat.com).
+- Hotel Giralda Center (Sevilla, 186 habitaciones): ahorro de consumo energético de hasta el 80 % y certificación LEED Oro (fuente: Guía B.E.G. Flex Living).
